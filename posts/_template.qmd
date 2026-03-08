@@ -1,0 +1,50 @@
+---
+title: "Your Post Title Here"
+author: "Robert W. Walker"
+date: "YYYY-MM-DD"
+categories: [category1, category2]
+image: "preview.png"
+draft: true
+description: "Brief description of your post"
+---
+
+## Introduction
+
+Start your post here...
+
+```{r}
+#| message: false
+#| warning: false
+
+# Load packages
+library(tidyverse)
+
+# Your code here
+```
+
+## Main Content
+
+### Subsection 1
+
+Content...
+
+### Subsection 2
+
+More content...
+
+## Conclusion
+
+Wrap up your thoughts...
+
+## Further Reading
+
+- Link 1
+- Link 2
+
+---
+
+## Session Info
+
+```{r}
+sessionInfo()
+```

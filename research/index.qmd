@@ -1,0 +1,83 @@
+---
+title: "Research"
+---
+
+## Overview
+
+My research program centers on developing and applying rigorous statistical methods to questions in political economy and public policy. I focus particularly on:
+
+- **Causal Inference** in observational settings
+- **Panel and Time Series** cross-sectional methods
+- **Political Economy** of institutions and policy
+- **Statistical Computing** in R and Python
+
+---
+
+## Current Projects
+
+### Causal Inference in Observed Populations
+
+::: {.callout-note icon=false}
+## With Tim Johnson
+
+We are developing new methods for identifying causal effects in settings where randomization is not possible or ethical. Our approach combines design-based and model-based inference strategies.
+
+**Status**: Under review  
+**Code**: [GitHub Repository](https://github.com)
+:::
+
+---
+
+### Statistical Backwards Induction
+
+::: {.callout-tip icon=false}
+## With Curt Signorino and Muhammet Bas
+
+This project develops statistical methods for analyzing strategic interaction in political science. We extend backwards induction to settings with incomplete information and bounded rationality.
+
+**Status**: Published in *Political Analysis*  
+**Award**: Warren Miller Prize  
+**Materials**: [Replication archive](https://github.com)
+:::
+
+---
+
+## Research Areas
+
+### [Causal Inference](research/causal-inference.qmd)
+Methods for identifying and estimating causal effects from observational data, with applications to policy evaluation.
+
+### [Panel Data Methods](research/panel-data.qmd)
+Time series cross-sectional models, fixed effects, dynamic panels, and heterogeneous treatment effects.
+
+### [Political Economy](research/political-economy.qmd)
+Institutional analysis, policy feedback, and the political economy of redistribution.
+
+---
+
+## Data & Code
+
+All research materials, including data and replication code, are available on my [GitHub](https://github.com/robertwwalker).
+
+I am committed to computational reproducibility and open science. Most projects include:
+
+- Documented R/Python code
+- Data (when not restricted)
+- Quarto/RMarkdown analysis notebooks
+- Instructions for replication
+
+---
+
+## Software
+
+### R Packages
+
+**`panelr`** - Tools for panel data analysis in R  
+[CRAN](https://cran.r-project.org) | [GitHub](https://github.com)
+
+**`tscsTools`** - Time series cross-sectional analysis utilities  
+[GitHub](https://github.com)
+
+### Teaching Materials
+
+Course materials and lecture slides are available in the [Teaching](../teaching/index.qmd) section.

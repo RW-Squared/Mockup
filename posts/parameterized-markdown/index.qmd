@@ -1,0 +1,52 @@
+---
+title: "Parameterizing Markdown"
+author: "Robert W. Walker"
+date: "2023-02-26"
+image: "image.png"
+tags:
+  - R
+  - plot
+  - R Markdown
+  - tidyTuesday
+  - tidyverse
+  - girafe
+bibliography: "bibliography.bib"
+nocite: |
+     @*
+title-block-banner: false 
+format: 
+   html:
+     comments:
+        giscus: 
+          repo: robertwwalker/robertwwalker.github.io
+---
+
+<marquee scrollamount="10"><h1><p style="color:purple;">{{< fa brands r-project  title="R">}}obertwwalker.github.io <br></p></h1></marquee>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE)
+```
+
+Last updated: `r Sys.time()` 
+
+Timezone: `r Sys.timezone()`
+
+## `iframe` and pages
+
+[I built a little proof of concept on equities.](https://robertwwalker.github.io/ReportTQ/index.html)  You can also see it here.
+
+<iframe src="https://robertwwalker.github.io/ReportTQ/index.html" width="680" height="600" allowfullscreen></iframe>
+
+## `iframe` and slides
+
+I built a little proof of concept for slides.  You can see it here.
+
+<iframe src="https://robertwwalker.github.io/CWD-Slides/week-6/index.html" width="680" height="600" allowfullscreen></iframe>
+
+# References
+
+```{r}
+knitr::write_bib(names(sessionInfo()$otherPkgs), file="bibliography.bib")
+```
+
+

@@ -1,0 +1,17 @@
+---
+title: "Blog"
+listing:
+  contents: /
+  sort: "date desc"
+  type: grid
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  page-size: 12
+  fields: [image, date, title, description, categories]
+page-layout: full
+---
+
+## Recent Posts
+
+Thoughts on statistics, data science, R programming, and quantitative methods.

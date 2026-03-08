@@ -1,0 +1,90 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Robert W. Walker"
+  site-url: "https://robertwwalker.work"
+  description: "Associate Professor of Quantitative Methods"
+  favicon: images/favicon.png
+  
+  navbar:
+    logo: images/image.png
+    background: "#16181d"
+    foreground: "#e8e9ed"
+    left:
+      - text: "About"
+        href: about.qmd
+        icon: person-circle
+      - text: "Research"
+        href: research/index.qmd
+        icon: graph-up
+      - text: "Teaching"
+        href: teaching/index.qmd
+        icon: mortarboard
+      - text: "Publications"
+        href: publications.qmd
+        icon: file-earmark-text
+      - text: "Blog"
+        href: posts/index.qmd
+        icon: pencil-square
+    right:
+      - icon: envelope
+        href: mailto:rwalker@willamette.edu
+        aria-label: Email
+      - icon: github
+        href: https://github.com/robertwwalker
+        aria-label: GitHub
+      - icon: twitter
+        href: https://twitter.com/PieRatio
+        aria-label: Twitter
+
+  page-footer:
+    background: "#16181d"
+    foreground: "#7a7f8c"
+    center: |
+      © 2024 Robert W. Walker · Powered by [Quarto](https://quarto.org) · Designed with artistry and precision
+    
+  sidebar:
+    - id: research
+      title: "Research"
+      style: "floating"
+      collapse-level: 1
+      contents:
+        - research/index.qmd
+        - research/causal-inference.qmd
+        - research/panel-data.qmd
+        - research/political-economy.qmd
+    
+    - id: teaching
+      title: "Teaching"
+      style: "floating"
+      collapse-level: 1
+      contents:
+        - teaching/index.qmd
+        - teaching/dadm.qmd
+        - teaching/essex.qmd
+
+format:
+  html:
+    theme: 
+      - cosmo
+      - css/steampunk-art-nouveau.scss
+    css: 
+      - css/custom.css
+    toc: false
+    smooth-scroll: true
+    link-external-newwindow: true
+    code-copy: true
+    code-overflow: wrap
+    highlight-style: monokai
+    mainfont: "Baskerville, Georgia, serif"
+    fontsize: 1em
+    linestretch: 1.6
+    
+execute:
+  freeze: auto
+  echo: true
+  warning: false
+  message: false
+
