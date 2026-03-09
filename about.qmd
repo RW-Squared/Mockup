@@ -1,18 +1,11 @@
 ---
-title: About Robert W. Walker, Ph. D.
-about:
-  template: marquee
-  links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/PieRatio
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/robert-w-walker
-    - icon: github
-      text: Github
-      href: https://github.com/robertwwalker
+title: "About"
+page-layout: full
+toc: false
 ---
+
+You can obtain my [curriculum vitae](./images/cv/vita.pdf){target="_blank"} and other details from this page.    
+
 
 ```{r setup, include=FALSE}
 library(distilltools)
@@ -21,11 +14,10 @@ library(gt)
 library(gtExtras)
 ```
 
-* [Robert W. Walker's Curriculum vitae](./images/cv/vita.pdf){target="_blank"}   
 
 ::: {.panel-tabset}
 
-## About
+## Bio
 
 :::::: columns
 
@@ -157,4 +149,12 @@ m
 
 ::::::
 
+:::
+
+## Affiliation
+
+::: {.affiliation-box}
+**Atkinson Graduate School of Management**  
+Willamette University  
+Salem, Oregon
 :::

@@ -4,13 +4,7 @@ page-layout: full
 toc: false
 ---
 
-::: {.hero-section}
-![](images/image.png)
-:::
-
-::: {.intro-text}
 I am an Associate Professor of Quantitative Methods at the [Atkinson Graduate School of Management](https://agsm.willamette.edu/), Willamette University. My research explores causal inference, political economy, and statistical computing—transforming complex data into profound understanding.
-:::
 
 ::: {.cards}
 
