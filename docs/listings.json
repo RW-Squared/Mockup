@@ -1,0 +1,50 @@
+[
+  {
+    "listing": "/publications.html",
+    "items": [
+      "/quarto_publications/EntConfZone/index.html",
+      "/quarto_publications/techno/index.html",
+      "/quarto_publications/PPM/index.html",
+      "/quarto_publications/geon-ord-logit/index.html",
+      "/quarto_publications/cjpp/index.html",
+      "/quarto_publications/MC2/index.html",
+      "/quarto_publications/PropTax/index.html",
+      "/quarto_publications/publius/index.html",
+      "/quarto_publications/ratingsMGMT/index.html",
+      "/quarto_publications/boosterism/index.html",
+      "/quarto_publications/MidClas/index.html",
+      "/quarto_publications/CivicPart/index.html",
+      "/quarto_publications/splits/index.html",
+      "/quarto_publications/SBI/index.html",
+      "/quarto_publications/DivGovPT/index.html",
+      "/quarto_publications/LongMem/index.html"
+    ]
+  },
+  {
+    "listing": "/posts/index.html",
+    "items": [
+      "/posts/Inbox-Cleaning/index.html",
+      "/posts/Trump-Dissent/index.html",
+      "/posts/Rstudio-Github/index.html",
+      "/posts/shinylive/index.html",
+      "/posts/UpdatingR/index.html",
+      "/posts/Transparency-Shiny/index.html",
+      "/posts/Docker-Shiny/index.html",
+      "/posts/parameterized-markdown/index.html",
+      "/posts/InteractiveVisualization/index.html",
+      "/posts/HumanRightsTable/index.html",
+      "/posts/Pigeons-Pallettes/index.html",
+      "/posts/A Data Visualization/index.html"
+    ]
+  },
+  {
+    "listing": "/teaching/index.html",
+    "items": [
+      "/teaching/courses-CWD.html",
+      "/teaching/courses-Essex.html",
+      "/teaching/courses-DADM.html",
+      "/teaching/courses-CAF.html",
+      "/teaching/courses-BUS1301.html"
+    ]
+  }
+]
