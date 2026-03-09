@@ -66,12 +66,18 @@ website:
       style: "floating"
       collapse-level: 1
       contents:
-        - teaching/index.qmd
-        - teaching/DADM/index.qmd
-        - teaching/Essex/index.qmd
-        - teaching/ChoiceForecasting/index.qmd
-        - teaching/DataCommunication/index.qmd
-        - teaching/BUS1301/index.qmd
+        - text: "Teaching"
+          href: teaching/index.qmd
+        - text: "DADM"
+          href: teaching/DADM/index.qmd
+        - text: "Essex"
+          href: teaching/Essex/index.qmd
+        - text: "Choice and Forecasting"
+          href: teaching/ChoiceForecasting/index.qmd
+        - text: "Communicating with Data"
+          href: teaching/DataCommunication/index.qmd
+        - text: "BUS 1301: AI Data/Management"
+          href: teaching/BUS1301/index.qmd
 
 format:
   html:
