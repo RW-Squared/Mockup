@@ -67,8 +67,11 @@ website:
       collapse-level: 1
       contents:
         - teaching/index.qmd
-        - teaching/dadm.qmd
-        - teaching/essex.qmd
+        - teaching/DADM/index.qmd
+        - teaching/Essex/index.qmd
+        - teaching/ChoiceForecasting/index.qmd
+        - teaching/DataCommunication/index.qmd
+        - teaching/BUS1301/index.qmd
 
 format:
   html:

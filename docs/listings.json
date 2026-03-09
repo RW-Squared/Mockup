@@ -40,11 +40,11 @@
   {
     "listing": "/teaching/index.html",
     "items": [
-      "/teaching/courses-CWD.html",
-      "/teaching/courses-Essex.html",
-      "/teaching/courses-DADM.html",
-      "/teaching/courses-CAF.html",
-      "/teaching/courses-BUS1301.html"
+      "/teaching/BUS1301/index.html",
+      "/teaching/ChoiceForecasting/index.html",
+      "/teaching/Essex/index.html",
+      "/teaching/DADM/index.html",
+      "/teaching/DataCommunication/index.html"
     ]
   }
 ]
