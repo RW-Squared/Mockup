@@ -72,7 +72,7 @@ format:
   html:
     theme: 
       - cosmo
-      - css/steampunk-SEMANTIC.scss
+      - steampunk-SEMANTIC.scss
     css: 
       - css/custom-cards.css
     toc: false
