@@ -247,7 +247,7 @@ div.csl-indent {
 </header>
 
 
-<p>Last updated: 2026-03-09 17:01:50.065092</p>
+<p>Last updated: 2026-03-09 17:19:43.303797</p>
 <p>Timezone: America/Los_Angeles</p>
 <section id="the-trump-case" class="level2">
 <h2 class="anchored" data-anchor-id="the-trump-case">The Trump Case</h2>
@@ -257,17 +257,23 @@ div.csl-indent {
 <h2 class="anchored" data-anchor-id="some-packages-and-setup">Some packages and setup</h2>
 <p>First, I will need three packages. <code>stringr</code> for string detection, <code>pdftools</code> for importing the pdf and the <code>tidyverse</code> by habit.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pdftools)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 </div>
 </section>
 <section id="import-the-file-and-look-for-dissent" class="level2">
 <h2 class="anchored" data-anchor-id="import-the-file-and-look-for-dissent">Import the file and look for <code>dissent</code></h2>
 <p>Let’s import the file and then just see if the stem “dissent” exists.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Opinion <span class="ot">&lt;-</span> <span class="fu">pdf_data</span>(<span class="st">"./data/23-719_19m2.pdf"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">str_detect</span>(<span class="fu">unlist</span>(Opinion), <span class="st">"dissent"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 FALSE  TRUE 
@@ -276,7 +282,10 @@ FALSE  TRUE
 </div>
 <p>Three times. Now let’s find them.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_locate_all</span>(Opinion, <span class="st">"dissent"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
      start end
@@ -347,24 +356,36 @@ FALSE  TRUE
 <section id="section-15" class="level2">
 <h2 class="anchored" data-anchor-id="section-15">Section 15</h2>
 <p>So let’s start with the 15th section and render the complete text that it contains.</p>
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(Opinion[[<span class="dv">15</span>]][[<span class="st">"text"</span>]], <span class="at">sep=</span><span class="st">" "</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <p>Cite as: 601 U. S. ____ (2024) 1 , J., concurring in part dissenting part S OTOMAYOR S OTOMAYOR , K AGAN , and J ACKSON , JJ., and concurring in in judgment SUPREME COURT OF THE UNITED STATES _________________ No.&nbsp;23–719 _________________ DONALD J. TRUMP, PETITIONER v. NORMA ANDERSON, ET AL . ON WRIT OF CERTIORARI TO THE SUPREME COURT OF COLORADO [March 4, 2024] J USTICE S OTOMAYOR , J USTICE K AGAN , and J USTICE J ACKSON , concurring in the judgment. “If it is not necessary to decide more to dispose of a case, then it is necessary not to decide more.” Dobbs v. Jackson Women’s Health Organization, 597 U. S. 215, 348 (2022) (R OBERTS , C. J., concurring in judgment). That fundamen- tal principle of judicial restraint is practically as old as our Republic. This Court is authorized “to say what the law is” only because “[t]hose who apply [a] rule to particular cases . . . must of necessity expound and interpret that rule.” Marbury v. Madison, 1 Cranch 137, 177 (1803) (emphasis added). Today, the Court departs from that vital principle, decid- ing not just this case, but challenges that might arise in the future. In this case, the Court must decide whether Colo- rado may keep a Presidential candidate off the ballot on the ground that he is an oathbreaking insurrectionist and thus disqualified from holding federal office under Section 3 of the Fourteenth Amendment. Allowing Colorado to do so would, we agree, create a chaotic state-by-state patchwork, at odds with our Nation’s federalism principles. That is enough to resolve this case. Yet the majority goes further. Even though “[a]ll nine Members of the Court” agree that this independent and sufficient rationale resolves this case,</p>
 <p>So apparently, someone was talked into a change. The other two sections reflect citations to dissents in the opinion.</p>
 </section>
 <section id="section-3" class="level2">
 <h2 class="anchored" data-anchor-id="section-3">Section 3</h2>
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(Opinion[[<span class="dv">3</span>]][[<span class="st">"text"</span>]], <span class="at">sep=</span><span class="st">" "</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <p>Cite as: 601 U. S. ____ (2024) 3 Per Curiam States” and the President is not an “officer of the United States” within the meaning of that provision. See App. to Pet. for Cert. 184a–284a. In December, the Colorado Supreme Court reversed in part and affirmed in part by a 4 to 3 vote. Reversing the District Court’s operative holding, the majority concluded that for purposes of Section 3, the Presidency is an office under the United States and the President is an officer of the United States. The court otherwise affirmed, holding (1) that the Colorado Election Code permitted the respond- ents’ challenge based on Section 3; (2) that Congress need not pass implementing legislation for disqualifications un- der Section 3 to attach; (3) that the political question doc- trine did not preclude judicial review of former President Trump’s eligibility; (4) that the District Court did not abuse its discretion in admitting into evidence portions of a con- gressional Report on the events of January 6; (5) that the District Court did not err in concluding that those events constituted an “insurrection” and that former President Trump “engaged in” that insurrection; and (6) that former President Trump’s speech to the crowd that breached the Capitol on January 6 was not protected by the First Amend- ment. See id., at 1a–114a. The Colorado Supreme Court accordingly ordered Secre- tary Griswold not to “list President Trump’s name on the 2024 presidential primary ballot” or “count any write-in votes cast for him.” Id., at 114a. Chief Justice Boatright and Justices Samour and Berkenkotter each filed dissent- ing opinions. Id., at 115a–124a, 125a–161a, 162a–183a. Under the terms of the opinion of the Colorado Supreme Court, its ruling was automatically stayed pending this Court’s review. See id., at 114a. We granted former Presi- dent Trump’s petition for certiorari, which raised a single question: “Did the Colorado Supreme Court err in ordering President Trump excluded from the 2024 presidential pri- mary ballot?” See 601 U. S. ___ (2024). Concluding that it</p>
 </section>
 <section id="section-20" class="level2">
 <h2 class="anchored" data-anchor-id="section-20">Section 20</h2>
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(Opinion[[<span class="dv">20</span>]][[<span class="st">"text"</span>]], <span class="at">sep=</span><span class="st">" "</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <p>6 TRUMP v. ANDERSON OTOMAYOR , , K K AGAN AGAN , , and J ACKSON , JJ., JJ., concurring in the S OTOMAYOR S J ACKSON concurring in judgment judgment Bush v. Gore, 531 U. S. 98, 158 (2000) (Breyer, J., dissent- ing). The Court today needed to resolve only a single ques- tion: whether an individual State may keep a Presidential candidate found to have engaged in insurrection off its bal- lot. The majority resolves much more than the case before us. Although federal enforcement of Section 3 is in no way at issue, the majority announces novel rules for how that enforcement must operate. It reaches out to decide Section 3 questions not before us, and to foreclose future efforts to disqualify a Presidential candidate under that provision. In a sensitive case crying out for judicial restraint, it abandons that course. Section 3 serves an important, though rarely needed, role in our democracy. The American people have the power to vote for and elect candidates for national office, and that is a great and glorious thing. The men who drafted and rati- fied the Fourteenth Amendment, however, had witnessed an “insurrection [and] rebellion” to defend slavery. §3. They wanted to ensure that those who had participated in that insurrection, and in possible future insurrections, could not return to prominent roles. Today, the majority goes beyond the necessities of this case to limit how Section 3 can bar an oathbreaking insurrectionist from becoming President. Although we agree that Colorado cannot enforce Section 3, we protest the majority’s effort to use this case to define the limits of federal enforcement of that provision. Because we would decide only the issue before us, we concur only in the judgment.</p>
 </section>
 <section id="references" class="level1">
 <h1>References</h1>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">write_bib</span>(<span class="fu">names</span>(<span class="fu">sessionInfo</span>()<span class="sc">$</span>otherPkgs), <span class="at">file=</span><span class="st">"bibliography.bib"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 </div>
 
 

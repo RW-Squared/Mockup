@@ -246,6 +246,8 @@ div.csl-indent {
 <p>In previous work with Skip Krueger, we conceptualized bond ratings as a multiple rater problem and extracted measure of state level creditworthiness. I had always had it on my list to do something like this and recently ran across a package called <code>geofacet</code> that makes it easy to do. The end result should parse out state level credit risk and showcase the time series of credit risk for each of the states.</p>
 <p>So here goes.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(geofacet)</span>
@@ -293,6 +295,7 @@ div.csl-indent {
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> </span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">4</span>, <span class="at">angle=</span><span class="dv">45</span>), <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">6</span>)) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Credit Quality in the US States"</span>)</span>
 <span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>Plot1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -306,7 +309,10 @@ div.csl-indent {
 <p>One thing that I quite liked about RMarkdown was column figures in the Tufte document templates. Those features are native to quarto, to a large extent. All we need do is add the following bit to code chunks.</p>
 <pre><code>#| column: margin</code></pre>
 <div class="cell page-columns page-full">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Plot1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 
 <div class="no-row-height column-margin column-container"><div class="cell-output-display">
 <div id="fig-map" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -322,9 +328,12 @@ Figure&nbsp;1: Credit quality in US States
 </div></div></div>
 <p>Same with tables.</p>
 <div class="cell page-columns page-full">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  Res1[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 
 <div class="no-row-height column-margin column-container"><div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -359,7 +368,10 @@ Figure&nbsp;1: Credit quality in US States
 <section id="references" class="level1">
 <h1>References</h1>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">write_bib</span>(<span class="fu">names</span>(<span class="fu">sessionInfo</span>()<span class="sc">$</span>otherPkgs), <span class="at">file=</span><span class="st">"bibliography.bib"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 </div>
 
 

@@ -22,7 +22,7 @@ My research program centers on developing and applying rigorous statistical meth
 
 We have a long-standing project expanding on his work using the Central Personnel Data File from the United State Office of Personnel Management.  In this paper, we examine the interaction of `veteran's preference` and education to demonstrate that the policy has no observable effect in the population.  The computation for this problem has proven a significant challenge.  The paper received a revise and resubmit at *Statistics and Public Policy* years ago but we knew of a problem that we only recently fixed.
 
-**Status**: Under review  
+**Status**: Under revision for resubmission  
 **Code**: [GitHub Repository](https://github.com)
 :::
 

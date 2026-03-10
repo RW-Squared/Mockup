@@ -91,6 +91,7 @@ format:
     link-external-newwindow: true
     code-copy: true
     code-overflow: wrap
+    code-fold: true
     highlight-style: monokai
     mainfont: "Baskerville, Georgia, serif"
     fontsize: 1em
