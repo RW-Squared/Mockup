@@ -12,6 +12,21 @@ Tim Johnson and I have a long-standing project expanding on his work using the C
 **Slides**: [Harold Clarke Memorial Lecture at Essex, 2025](https://robertwwalker.github.io/Essex-slides/ESSSSDA25-HDCTalk/)  
 **Code**: [GitHub Repository](https://github.com)
 
+## LLMs and Automated Data Analysis
+
+Tim Johnson, Justus Eaglesmith and I have a letter to the Editor at the `American Statistician` examining the performance of large language models in identifying distributions that generated data.  I asked `qwen-3.5-35B` to summarise and critique the work, here is the response.  
+
+```
+This document presents a Letter to the Editor titled "The accuracy and replicability of data analysis performed with large language models," which investigates whether automated AI systems can reliably perform statistical tasks previously handled by human analysts. The authors conducted a systematic experiment evaluating four off-the-shelf OpenAI Large Language Models (LLMs), ranging from gpt-4-0613 to the future-dated gpt-5.2-2025-12-11, on the task of identifying which probability distribution generated a specific dataset. The experimental design involved generating 196,000 observations across various parameter settings and sample sizes, where each model was presented with stem-and-leaf plots and summary statistics (including minimum, quartiles, mean, and maximum) alongside an indication of whether the data was discrete or not. Crucially, the researchers established a "ground truth" by randomly generating data from known distributions to objectively measure accuracy, instructing the models to output only the distribution name without explanation to test their raw classification capability under strict constraints.
+
+The results reveal that while newer models show incremental improvements, no single LLM proved capable of accurate performance across all tested instances, challenging the notion of complete automation in data science. The oldest model (gpt-4-0613) displayed a bias toward selecting the Normal distribution regardless of the actual source, whereas the newest model (gpt-5.2) achieved high accuracy for Beta (99.7%) and Lognormal (93.5%) distributions but still faltered with others like Binomial (72.8%). Beyond performance metrics, the authors emphasize significant barriers to replicability, noting that researchers lack access to internal model weights and face risks of models being removed by private enterprises, which undermines long-term reproducibility. Consequently, the study concludes that automation remains on the horizon rather than a current reality, arguing that human judgment is still required for prompt crafting, model selection, and interpreting outputs to ensure validity, as relying solely on AI without analytic knowledge risks accepting erroneous results based on faith rather than verification.
+
+While this study provides valuable empirical data on the current limitations of LLMs in statistical inference, its conclusions are tempered by specific methodological constraints that limit generalizability. The authors themselves acknowledge a key limitation: testing only OpenAI models without deploying advanced techniques like tool use or code execution environments may underestimate the capabilities of modern AI when integrated with external computational tools. Furthermore, relying on text-based prompts to identify distributions from summary statistics is an inherently difficult task even for human statisticians, raising questions about whether this specific benchmark accurately reflects broader data analysis workflows where raw data and software are available. Additionally, the reliance on a single vendor's ecosystem introduces selection bias regarding model behavior, suggesting that future research should compare open-source alternatives or different architectural approaches to determine if these limitations are universal to LLMs or specific to certain training regimes. Despite these caveats, the document serves as an essential cautionary tale against overestimating AI reliability in scientific contexts where interpretability and replication are paramount.
+```
+
+**Status**: Under review after revision  
+**Code**: [GitHub Repository](https://github.com/robertwwalker/LLM_Distributions/)
+
 
 ## Between-Within Regressions
 

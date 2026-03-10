@@ -32,12 +32,12 @@ library(gtExtras)
 # install with remotes::install_github("jimjam-slam/ggflags")
 library(countrycode)
 library(ggflags) 
-load("data/HumanRightsProtectionScores_v4.01.Rdata")
+load("data/HumanRightsProtectionScores_v4.01.RData")
 HR.Data <- x
 rm(x)
 HR.Data <- HR.Data %>% left_join(., codelist, by= c("COW" = "cown"))
 ```
-Let me now put the data into a browseable table.
+Let me now put the data into a browsable table.
 
 ## A Browsable DataTable
 

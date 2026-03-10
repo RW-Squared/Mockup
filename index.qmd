@@ -19,7 +19,7 @@ Learn about my background, education, and academic journey through appointments 
 ## Research
 Causal inference, panel data methods, political economy, and statistical computing with R and Python.
 
-[Explore research →](research/index.qmd)
+[Explore research →](research.qmd)
 :::
 
 ::: {.card}
