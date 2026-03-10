@@ -4,7 +4,7 @@ page-layout: full
 toc: false
 ---
 
-I am an Associate Professor of Quantitative Methods at the [Atkinson Graduate School of Management](https://agsm.willamette.edu/), Willamette University. My research explores causal inference, political economy, and statistical computing—transforming complex data into profound understanding.
+I am an [Associate Professor of Quantitative Methods](https://my.willamette.edu/people/rwalker) at the [Atkinson Graduate School of Management](https://willamette.edu/academics/mba/), [Willamette University](https://willamette.edu). My research explores [causal inference](research/causal-inference.qmd), [political economy](research/political-economy.qmd), and statistical computing.  I work to transform complex data into actionable understanding.
 
 ::: {.cards}
 

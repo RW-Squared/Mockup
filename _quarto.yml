@@ -58,6 +58,7 @@ website:
       contents:
         - research/index.qmd
         - research/causal-inference.qmd
+        - research/multiple-rater.qmd
         - research/panel-data.qmd
         - research/political-economy.qmd
     
