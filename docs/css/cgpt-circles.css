@@ -2,8 +2,8 @@
    MINIMAL LANDING PAGE WITH CIRCULAR SPOTS
    ========================================== */
 
-/* Import clean elegant fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+/* Import elegant Garamond fonts */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
 
 /* Override Quarto defaults that cause scrolling on landing page */
 body:has(.home-hero-overlay) {
@@ -63,9 +63,9 @@ body:has(.home-hero-overlay) .page-footer {
 body:has(.home-hero-overlay) h1.title,
 body:has(.home-hero-overlay) .title {
   text-align: left !important;
-  font-family: 'Cinzel', Georgia, serif !important;
+  font-family: 'EB Garamond', Georgia, serif !important;
   font-weight: 600 !important;
-  letter-spacing: 0.05em !important;
+  letter-spacing: 0.02em !important;
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -154,10 +154,10 @@ body:has(.home-hero-overlay) .title {
   
   /* Lavender-pink elegant typography */
   color: #E8BADB;
-  font-family: 'Cinzel', Georgia, serif;
-  font-size: 0.85rem;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-align: center;
   padding: 0.75rem;
   text-transform: uppercase;

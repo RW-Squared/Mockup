@@ -1,7 +1,7 @@
 /*-- scss:defaults --*/
 
-/* Import clean elegant fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+/* Import elegant Garamond fonts */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
 
 /* =======================================================
    Robert W. Walker site theme
@@ -35,7 +35,7 @@ $text-faint: #9e8fbb;
 
 /* ---------- Typography ---------- */
 $font-family-base: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-$font-family-headings: 'Cinzel', Georgia, serif;
+$font-family-headings: 'EB Garamond', Georgia, serif;
 
 /* ---------- Quarto / Bootstrap hooks ---------- */
 $body-bg: $bg-dark;
@@ -182,7 +182,7 @@ h6 {
   font-family: $font-family-headings;
   font-weight: 600;
   text-wrap: balance;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 h1 {
@@ -397,9 +397,9 @@ main.content > :last-child,
 .navbar-title {
   color: $text-heading;
   font-family: $font-family-headings;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   line-height: 1;
   display: inline-flex;
   align-items: center;
