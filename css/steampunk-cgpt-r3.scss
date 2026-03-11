@@ -26,11 +26,11 @@ $bg-light: #362756;
 $bg-lighter: #453465;
 
 /* ---------- Text palette ---------- */
-$text-primary: #d7c8ee;
-$text-secondary: #cab9e6;
+$text-primary: #edd8f8;
+$text-secondary: #f0b8ea;
 $text-muted: #bca9dd;
-$text-heading: #edd8f8;
-$text-heading-strong: #f0b8ea;
+$text-heading: #d7c8ee;
+$text-heading-strong: #cab9e6;
 $text-faint: #9e8fbb;
 
 /* ---------- Typography ---------- */
@@ -106,7 +106,7 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: -3;
-  background: url("images/FinalBannerA.webp") center center / cover no-repeat;
+  background: url("images/FinalBanner.webp") center center / cover no-repeat;
   filter: saturate(0.95) contrast(1.02);
   transform: scale(1.02);
 }
@@ -699,7 +699,7 @@ code:not(pre code) {
 @media (max-width: 768px) {
   body::before {
     transform: none;
-    background: url("images/FinalBannerA.webp") center top / cover no-repeat;
+    background: url("images/FinalBanner.webp") center top / cover no-repeat;
   }
 
   #quarto-content {
