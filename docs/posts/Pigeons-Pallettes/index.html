@@ -286,9 +286,9 @@ div.csl-indent {
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Pigeon.colors</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "#C7A0E4" "#F691EA" "#EF90E8" "#9FABE5" "#9AA9E1" "#FFB3D5" "#DFC19D"
- [8] "#E374BE" "#96A8DF" "#ED7ED6" "#A0B3E5" "#F48DDB" "#98B2E1" "#E490D8"
-[15] "#A3A1E6" "#DC9DE7" "#E79FEA" "#D5A0F0" "#E777D3" "#E99DEF"</code></pre>
+<pre><code> [1] "#E282E3" "#A2A9EA" "#F289E3" "#9FA7E3" "#F199EA" "#9CB2E6" "#E79FED"
+ [8] "#EE7FDA" "#ED72BC" "#A4B7EE" "#E774C0" "#DEC29A" "#FFB3D5" "#9CBDEB"
+[15] "#F0A1EB" "#A39CE1" "#E487BB" "#A4B5ED" "#E974CB" "#96B3EF"</code></pre>
 </div>
 </div>
 <p>Now I have a palette in the markdown environment called Pigeon.colors.</p>
@@ -304,11 +304,11 @@ div.csl-indent {
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Stuff      vals
-1    Hi 0.7222195
-2 Howdy 0.7121211
-3 Hello 0.9586608
-4  Hola 0.5684462
-5 Hallo 0.6998438</code></pre>
+1    Hi 0.7638814
+2 Howdy 0.8660173
+3 Hello 0.7603606
+4  Hola 0.8536109
+5 Hallo 0.4651801</code></pre>
 </div>
 </div>
 <p>I want to graph it using a barplot equivalent because I have the height of the bars in <code>vals</code>. Let me use the fill aesthetic to fill the bars in by the five discrete things stored as <code>Stuff</code>. The trick to using it is to manually specify the colors and point it to the <code>Pigeon.colors</code> above.</p>
@@ -425,7 +425,7 @@ Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takaha
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/robertwwalker\.github\.io\/Mockup\/");
+        var filterRegex = new RegExp("https:\/\/robertwwalker\.work\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
