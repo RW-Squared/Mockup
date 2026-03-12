@@ -17,7 +17,7 @@ body:has(.home-hero-overlay) {
 
 body:has(.home-hero-overlay) #quarto-content {
   min-height: auto !important;
-  padding-top: 35vh !important;
+  padding-top: 15vh !important;
   padding-bottom: 0 !important;
   flex: 1 !important;
   display: flex;
@@ -282,7 +282,7 @@ body:has(.home-hero-overlay) .circle-card a:hover::after {
 /* Responsive Design */
 @media (max-width: 768px) {
   body:has(.home-hero-overlay) #quarto-content {
-    padding-top: 30vh !important;
+    padding-top: 12vh !important;
   }
 
   body:has(.home-hero-overlay) main.content,
@@ -315,7 +315,7 @@ body:has(.home-hero-overlay) .circle-card a:hover::after {
 
 @media (max-width: 480px) {
   body:has(.home-hero-overlay) #quarto-content {
-    padding-top: 25vh !important;
+    padding-top: 10vh !important;
   }
 
   body:has(.home-hero-overlay) main.content,

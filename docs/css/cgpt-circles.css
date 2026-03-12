@@ -17,12 +17,24 @@ body:has(.home-hero-overlay) {
 
 body:has(.home-hero-overlay) #quarto-content {
   min-height: auto !important;
-  padding-top: 40vh !important;
+  padding-top: 35vh !important;
   padding-bottom: 0 !important;
   flex: 1 !important;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* Remove column width constraints on landing page */
+body:has(.home-hero-overlay) .column-body,
+body:has(.home-hero-overlay) .column-page,
+body:has(.home-hero-overlay) .column-body-outset {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 body:has(.home-hero-overlay) main.content,
@@ -37,7 +49,16 @@ body:has(.home-hero-overlay) .page-layout-custom .content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 25% !important;
+  padding-left: 10% !important;
+  border-radius: 0 !important;
+}
+
+/* Remove the overlay gradient ::before element on landing page */
+body:has(.home-hero-overlay) main.content::before,
+body:has(.home-hero-overlay) .page-layout-article .content::before,
+body:has(.home-hero-overlay) .page-layout-custom .content::before {
+  display: none !important;
+  content: none !important;
 }
 
 body:has(.home-hero-overlay) .nav-footer,
@@ -54,7 +75,7 @@ body:has(.home-hero-overlay) .page-footer {
   margin-top: 0;
   min-height: auto;
   max-height: none;
-  padding: 0 2rem 1rem 0;
+  padding: 0 2rem 0.5rem 0;
   overflow: visible;
   width: 100%;
 }
@@ -82,10 +103,10 @@ body:has(.home-hero-overlay) .title {
 
 .lead-minimal {
   font-size: 0.95rem;
-  line-height: 1.4;
+  line-height: 1.2;
   color: rgba(243, 241, 250, 0.7);
   max-width: 450px;
-  margin: 0 0 0.8rem 0;
+  margin: 0 0 0.2rem 0;
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -99,8 +120,8 @@ body:has(.home-hero-overlay) .title {
 body:has(.home-hero-overlay) .circle-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-  max-width: 900px;
+  gap: 0.5rem;
+  max-width: 720px;
   margin: 0;
   padding: 0;
   justify-items: start;
@@ -110,16 +131,16 @@ body:has(.home-hero-overlay) .circle-grid {
 body:has(.home-hero-overlay) .circle-grid.single-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-  max-width: 900px;
+  gap: 0.5rem;
+  max-width: 720px;
   justify-items: start;
 }
 
 /* Individual Circle Cards - Landing page only */
 body:has(.home-hero-overlay) .circle-card {
   position: relative;
-  width: 216px;
-  height: 216px;
+  width: 173px;
+  height: 173px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -156,11 +177,11 @@ body:has(.home-hero-overlay) .circle-card a {
   /* Lavender-pink elegant typography */
   color: #E8BADB;
   font-family: 'EB Garamond', Georgia, serif;
-  font-size: 1.6rem;
+  font-size: 1.28rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-align: center;
-  padding: 1.5rem;
+  padding: 1.2rem;
   text-transform: uppercase;
   
   /* Smooth transitions */
@@ -261,30 +282,30 @@ body:has(.home-hero-overlay) .circle-card a:hover::after {
 /* Responsive Design */
 @media (max-width: 768px) {
   body:has(.home-hero-overlay) #quarto-content {
-    padding-top: 35vh !important;
+    padding-top: 30vh !important;
   }
 
   body:has(.home-hero-overlay) main.content,
   body:has(.home-hero-overlay) .page-layout-article .content,
   body:has(.home-hero-overlay) .page-layout-custom .content {
-    padding-left: 15% !important;
+    padding-left: 8% !important;
   }
 
   body:has(.home-hero-overlay) .circle-grid,
   body:has(.home-hero-overlay) .circle-grid.single-row {
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 0.5rem;
     max-width: 750px;
     padding: 0;
   }
 
   body:has(.home-hero-overlay) .circle-card {
-    width: 210px;
-    height: 210px;
+    width: 168px;
+    height: 168px;
   }
 
   body:has(.home-hero-overlay) .circle-card a {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .lead-minimal {
@@ -294,7 +315,7 @@ body:has(.home-hero-overlay) .circle-card a:hover::after {
 
 @media (max-width: 480px) {
   body:has(.home-hero-overlay) #quarto-content {
-    padding-top: 30vh !important;
+    padding-top: 25vh !important;
   }
 
   body:has(.home-hero-overlay) main.content,
@@ -306,18 +327,18 @@ body:has(.home-hero-overlay) .circle-card a:hover::after {
   body:has(.home-hero-overlay) .circle-grid,
   body:has(.home-hero-overlay) .circle-grid.single-row {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 0.5rem;
     max-width: 100%;
     padding: 0;
   }
 
   body:has(.home-hero-overlay) .circle-card {
-    width: 190px;
-    height: 190px;
+    width: 152px;
+    height: 152px;
   }
 
   body:has(.home-hero-overlay) .circle-card a {
-    font-size: 1.4rem;
+    font-size: 1.12rem;
   }
 
   .lead-minimal {
@@ -330,8 +351,8 @@ body:has(.home-hero-overlay) .circle-card a:hover::after {
   body:has(.home-hero-overlay) .circle-grid,
   body:has(.home-hero-overlay) .circle-grid.single-row {
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    max-width: 950px;
+    gap: 0.75rem;
+    max-width: 760px;
   }
 }
 

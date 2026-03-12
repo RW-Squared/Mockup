@@ -81,9 +81,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -274,10 +274,9 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-body" id="quarto-document-content">
+<main class="content column-page-right" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -286,7 +285,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta column-body">
+<div class="quarto-title-meta column-page-right">
 
     
   
@@ -303,39 +302,18 @@ window.Quarto = {
 
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-author" data-direction="asc">
-        Author
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
 <div class="list grid quarto-listing-cols-3">
 <div class="g-col-1" data-index="0" data-listing-file-modified-sort="1773198251462" data-listing-reading-time-sort="1" data-listing-word-count-sort="189">
 <a href="./research/causal-inference.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Causal Inference
 </h5>
+<div class="card-text listing-description delink">
+Two current projects have causal inference goals.
+</div>
 <div class="card-attribution card-text-small start">
 <div class="listing-author">
 
@@ -347,10 +325,14 @@ Causal Inference
 <div class="g-col-1" data-index="1" data-listing-file-modified-sort="1773198251462" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
 <a href="./research/multiple-rater.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Multiple Rater Research
 </h5>
+<div class="card-text listing-description delink">
+Skip Krueger, I, and co-authors published a series of papers conceptualizing default risk as a multiple rater problem including the papers by <span class="citation" data-cites="krueger2010management">Krueger and Walker (2010)</span>, <span class="citation" data-cites="krueger2010boosterism">Krueg…</span><span class="citation" data-cites="walker2009splitratings"></span><span class="citation" data-cites="krueger2008bondratings"></span>
+</div>
 <div class="card-attribution card-text-small start">
 <div class="listing-author">
 
@@ -362,10 +344,14 @@ Multiple Rater Research
 <div class="g-col-1" data-index="2" data-listing-file-modified-sort="1773198251462" data-listing-reading-time-sort="4" data-listing-word-count-sort="664">
 <a href="./research/panel-data.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Panel Data
 </h5>
+<div class="card-text listing-description delink">
+Almost all of my projects involve panel data.
+</div>
 <div class="card-attribution card-text-small start">
 <div class="listing-author">
 
@@ -377,10 +363,14 @@ Panel Data
 <div class="g-col-1" data-index="3" data-listing-file-modified-sort="1773198251462" data-listing-reading-time-sort="1" data-listing-word-count-sort="127">
 <a href="./research/political-economy.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Political Economy Research
 </h5>
+<div class="card-text listing-description delink">
+Almost all of my work sits at the intersection of political science and economics – political economy. <span class="citation" data-cites="walker2005phd">Walker (2005)</span> contained a series of papers spanning political…<span class="citation" data-cites="krueger2010management"></span><span class="citation" data-cites="krueger2010boosterism"></span><span class="citation" data-cites="walker2009splitratings"></span><span class="citation" data-cites="krueger2008bondratings"></span><span class="citation" data-cites="krueger2011asd"></span>
+</div>
 <div class="card-attribution card-text-small start">
 <div class="listing-author">
 
@@ -392,10 +382,14 @@ Political Economy Research
 <div class="g-col-1" data-index="4" data-listing-file-modified-sort="1773198251462" data-listing-reading-time-sort="1" data-listing-word-count-sort="101">
 <a href="./research/political-methodology.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Political Methodology Research
 </h5>
+<div class="card-text listing-description delink">
+<span class="citation" data-cites="lebo2000longmemory">Lebo, Walker, and Clarke (2000)</span> demonstrated the widespread applicability of fractional integration methods for political time series.
+</div>
 <div class="card-attribution card-text-small start">
 <div class="listing-author">
 
