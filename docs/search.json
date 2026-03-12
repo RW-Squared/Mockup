@@ -1,19 +1,18 @@
 [
   {
-    "objectID": "teaching/DataCommunication/index.html",
-    "href": "teaching/DataCommunication/index.html",
-    "title": "Courses: Communicating With Data",
+    "objectID": "teaching/index.html",
+    "href": "teaching/index.html",
+    "title": "Teaching",
     "section": "",
-    "text": "Communicating with Data is a cross-listed course in the graduate school of Management and the Data Science program. In the course, we explore communication tools, e.g. tables and interactive tables, figures and interactive figures, shiny apps, websites, parameterized markdown, and, quite generically, the provision of tools for end users of data science tooling for insights. The course was designed to supplement data science education with the core ability to present insights into digestible forms for decision makers.\n\nThere is a course website.\n\n\n\n\nThe slides for Spring 2023",
+    "text": "BUS 1301 - Managing with Data and AI\n\n\n\n\n\n\n\n\n\n\n\n\nChoice and Forecasting\n\n\n\n\n\n\n\n\n\n\n\n\nCommunicating With Data\n\n\n\n\n\n\n\n\n\n\n\n\nData Analysis, Modeling, and Decision-Making\n\n\n\n\n\n\n\n\n\n\n\n\nPanel Data at Essex\n\n\n\n\n\nNo matching items",
     "crumbs": [
-      "Teaching",
-      "Communicating with Data"
+      "Teaching"
     ]
   },
   {
-    "objectID": "teaching/DataCommunication/index.html#communicating-with-data",
-    "href": "teaching/DataCommunication/index.html#communicating-with-data",
-    "title": "Courses: Communicating With Data",
+    "objectID": "teaching/DataCommunication/index.html",
+    "href": "teaching/DataCommunication/index.html",
+    "title": "Communicating With Data",
     "section": "",
     "text": "Communicating with Data is a cross-listed course in the graduate school of Management and the Data Science program. In the course, we explore communication tools, e.g. tables and interactive tables, figures and interactive figures, shiny apps, websites, parameterized markdown, and, quite generically, the provision of tools for end users of data science tooling for insights. The course was designed to supplement data science education with the core ability to present insights into digestible forms for decision makers.\n\nThere is a course website.\n\n\n\n\nThe slides for Spring 2023",
     "crumbs": [
@@ -24,18 +23,7 @@
   {
     "objectID": "teaching/ChoiceForecasting/index.html",
     "href": "teaching/ChoiceForecasting/index.html",
-    "title": "Courses: Choice and Forecasting",
-    "section": "",
-    "text": "Models of Choice and Forecasting is intended to augment a first course in linear regression with extensions of linear models to generalized linear models for a broader array of data types and a dive into time series regression and forecasting.\nThe first half of the course is built around The Handbook of Regression Modeling in People Analytics: With Examples in R, Python, and Julia by Keith McNulty [Global Director of Talent Sciences at McKinsey and Company] that covers models for discrete data types [binary, ordered, nominal choices, counts of events, and survival/duration analysis].\nThe second half of the course relies on the excellent Forecasting, Principles and Practice, 3rd Edition, by Rob J. Hyndman and George Athanasopoulos of Monash University in Australia that is entirely supported by R libraries for time series problems.\nThe lectures will focus on intuition and the mathematical logic but the goal is to put the tools into practice. To this end, the expectations are weekly homework exercises to insure that we can actually do what we are presented but there are two key summary deliverables: a project employing a detailed application of choice models near the middle and a project in time series forecasting due at the end of the term. Both are to be presented at the end of the term.\n\nThere is a website for the course.",
-    "crumbs": [
-      "Teaching",
-      "Choice and Forecasting"
-    ]
-  },
-  {
-    "objectID": "teaching/ChoiceForecasting/index.html#models-of-choice-and-forecasting",
-    "href": "teaching/ChoiceForecasting/index.html#models-of-choice-and-forecasting",
-    "title": "Courses: Choice and Forecasting",
+    "title": "Choice and Forecasting",
     "section": "",
     "text": "Models of Choice and Forecasting is intended to augment a first course in linear regression with extensions of linear models to generalized linear models for a broader array of data types and a dive into time series regression and forecasting.\nThe first half of the course is built around The Handbook of Regression Modeling in People Analytics: With Examples in R, Python, and Julia by Keith McNulty [Global Director of Talent Sciences at McKinsey and Company] that covers models for discrete data types [binary, ordered, nominal choices, counts of events, and survival/duration analysis].\nThe second half of the course relies on the excellent Forecasting, Principles and Practice, 3rd Edition, by Rob J. Hyndman and George Athanasopoulos of Monash University in Australia that is entirely supported by R libraries for time series problems.\nThe lectures will focus on intuition and the mathematical logic but the goal is to put the tools into practice. To this end, the expectations are weekly homework exercises to insure that we can actually do what we are presented but there are two key summary deliverables: a project employing a detailed application of choice models near the middle and a project in time series forecasting due at the end of the term. Both are to be presented at the end of the term.\n\nThere is a website for the course.",
     "crumbs": [
@@ -344,7 +332,7 @@
     "href": "posts/qwen-3.5-35B-Marketing/index.html#bgnbd-customer-lifetime-model",
     "title": "Exploring qwen-3.5 35B",
     "section": "2. BG/NBD Customer Lifetime Model",
-    "text": "2. BG/NBD Customer Lifetime Model\nThe BG/NBD model is widely used to model purchasing behavior in non-contractual customer relationships such as retail or e-commerce.\nKey assumptions:\n\nTransactions follow a Poisson process\nPurchase rates vary across customers\nCustomers may become inactive after transactions\n\nThe model uses frequency, recency, and the observation window. Monetary value is often modeled separately using a Gamma-Gamma model.\n\n\nCode\nimport numpy as np\n\ndef simulate_bgnbd(n_customers, r, alpha, a, b, T):\n    purchase_rates = np.random.gamma(r, 1 / alpha, n_customers)\n    dropout_probs = np.random.beta(a, b, n_customers)\n\n    purchases = []\n\n    for i in range(n_customers):\n        alive = True\n        t = 0\n        count = 0\n\n        while alive and t &lt; T:\n            wait = np.random.exponential(1 / purchase_rates[i])\n            t += wait\n\n            if t &lt; T:\n                count += 1\n                if np.random.rand() &lt; dropout_probs[i]:\n                    alive = False\n\n        purchases.append(count)\n\n    return np.array(purchases)\n\nsim = simulate_bgnbd(1000, 0.8, 4, 1.5, 3, 10)\nprint(\"Mean purchases:\", sim.mean())\n\n\nMean purchases: 1.167\n\n\nMonte Carlo simulation can be used to evaluate uncertainty in predicted customer lifetime value distributions."
+    "text": "2. BG/NBD Customer Lifetime Model\nThe BG/NBD model is widely used to model purchasing behavior in non-contractual customer relationships such as retail or e-commerce.\nKey assumptions:\n\nTransactions follow a Poisson process\nPurchase rates vary across customers\nCustomers may become inactive after transactions\n\nThe model uses frequency, recency, and the observation window. Monetary value is often modeled separately using a Gamma-Gamma model.\n\n\nCode\nimport numpy as np\n\ndef simulate_bgnbd(n_customers, r, alpha, a, b, T):\n    purchase_rates = np.random.gamma(r, 1 / alpha, n_customers)\n    dropout_probs = np.random.beta(a, b, n_customers)\n\n    purchases = []\n\n    for i in range(n_customers):\n        alive = True\n        t = 0\n        count = 0\n\n        while alive and t &lt; T:\n            wait = np.random.exponential(1 / purchase_rates[i])\n            t += wait\n\n            if t &lt; T:\n                count += 1\n                if np.random.rand() &lt; dropout_probs[i]:\n                    alive = False\n\n        purchases.append(count)\n\n    return np.array(purchases)\n\nsim = simulate_bgnbd(1000, 0.8, 4, 1.5, 3, 10)\nprint(\"Mean purchases:\", sim.mean())\n\n\nMean purchases: 1.122\n\n\nMonte Carlo simulation can be used to evaluate uncertainty in predicted customer lifetime value distributions."
   },
   {
     "objectID": "posts/qwen-3.5-35B-Marketing/index.html#bayesian-marketing-mix-models",
@@ -358,28 +346,28 @@
     "href": "posts/qwen-3.5-35B-Marketing/index.html#conjoint-choice-models",
     "title": "Exploring qwen-3.5 35B",
     "section": "4. Conjoint Choice Models",
-    "text": "4. Conjoint Choice Models\nConjoint analysis decomposes product preferences into part-worth utilities.\nConsumer utility is typically represented as:\n\\[\nU_{ij} = \\beta X_{ij} + \\epsilon_{ij}\n\\]\nChoice probabilities often follow a multinomial logit model. Monte Carlo simulation is commonly used to estimate market share under hypothetical product configurations.\n\n\nCode\nimport numpy as np\n\nbeta = np.array([0.8, 0.3, -0.4])\n\nproducts = np.array([\n    [1, 0, 1],\n    [0, 1, 0],\n    [1, 1, 0]\n])\n\nn_sim = 5000\nshares = np.zeros(len(products))\n\nfor _ in range(n_sim):\n    utilities = products @ beta + np.random.gumbel(size=len(products))\n    choice = np.argmax(utilities)\n    shares[choice] += 1\n\nshares /= n_sim\nprint(\"Estimated shares:\", shares)\n\n\nEstimated shares: [0.259  0.2288 0.5122]"
+    "text": "4. Conjoint Choice Models\nConjoint analysis decomposes product preferences into part-worth utilities.\nConsumer utility is typically represented as:\n\\[\nU_{ij} = \\beta X_{ij} + \\epsilon_{ij}\n\\]\nChoice probabilities often follow a multinomial logit model. Monte Carlo simulation is commonly used to estimate market share under hypothetical product configurations.\n\n\nCode\nimport numpy as np\n\nbeta = np.array([0.8, 0.3, -0.4])\n\nproducts = np.array([\n    [1, 0, 1],\n    [0, 1, 0],\n    [1, 1, 0]\n])\n\nn_sim = 5000\nshares = np.zeros(len(products))\n\nfor _ in range(n_sim):\n    utilities = products @ beta + np.random.gumbel(size=len(products))\n    choice = np.argmax(utilities)\n    shares[choice] += 1\n\nshares /= n_sim\nprint(\"Estimated shares:\", shares)\n\n\nEstimated shares: [0.2446 0.2394 0.516 ]"
   },
   {
     "objectID": "posts/qwen-3.5-35B-Marketing/index.html#newsvendor-inventory-model",
     "href": "posts/qwen-3.5-35B-Marketing/index.html#newsvendor-inventory-model",
     "title": "Exploring qwen-3.5 35B",
     "section": "5. Newsvendor Inventory Model",
-    "text": "5. Newsvendor Inventory Model\nThe newsvendor model determines optimal inventory when demand is uncertain.\nThe optimal order quantity is:\n\\[\nQ^* = F^{-1}\\left(\\frac{C_u}{C_u + C_o}\\right)\n\\]\nwhere:\n\n\\(C_u\\) is the understock cost\n\\(C_o\\) is the overstock cost\n\nMonte Carlo simulation helps evaluate profit distributions under uncertain demand.\n\n\nCode\nimport numpy as np\n\ndemand = np.random.normal(100, 20, 10000)\n\nCu = 5\nCo = 2\ncritical_ratio = Cu / (Cu + Co)\nQ_star = np.quantile(demand, critical_ratio)\n\nprofits = []\nfor d in demand:\n    sales = min(Q_star, d)\n    profit = 10 * sales - 3 * Q_star\n    profits.append(profit)\n\nprint(\"Mean profit:\", np.mean(profits))\n\n\nMean profit: 633.2373509704312"
+    "text": "5. Newsvendor Inventory Model\nThe newsvendor model determines optimal inventory when demand is uncertain.\nThe optimal order quantity is:\n\\[\nQ^* = F^{-1}\\left(\\frac{C_u}{C_u + C_o}\\right)\n\\]\nwhere:\n\n\\(C_u\\) is the understock cost\n\\(C_o\\) is the overstock cost\n\nMonte Carlo simulation helps evaluate profit distributions under uncertain demand.\n\n\nCode\nimport numpy as np\n\ndemand = np.random.normal(100, 20, 10000)\n\nCu = 5\nCo = 2\ncritical_ratio = Cu / (Cu + Co)\nQ_star = np.quantile(demand, critical_ratio)\n\nprofits = []\nfor d in demand:\n    sales = min(Q_star, d)\n    profit = 10 * sales - 3 * Q_star\n    profits.append(profit)\n\nprint(\"Mean profit:\", np.mean(profits))\n\n\nMean profit: 629.792907214138"
   },
   {
     "objectID": "posts/qwen-3.5-35B-Marketing/index.html#markov-customer-journey-models",
     "href": "posts/qwen-3.5-35B-Marketing/index.html#markov-customer-journey-models",
     "title": "Exploring qwen-3.5 35B",
     "section": "6. Markov Customer Journey Models",
-    "text": "6. Markov Customer Journey Models\nCustomer journeys often involve transitions between marketing channels before conversion. A Markov chain can represent the transition process.\nExample states:\n\nAwareness\nWebsite\nCart\nPurchase\nExit\n\nMonte Carlo simulation can estimate conversion probabilities and path distributions.\n\n\nCode\nimport numpy as np\n\nstates = [\"Aware\", \"Visit\", \"Cart\", \"Purchase\", \"Exit\"]\n\ntransition = np.array([\n    [0, 0.6, 0.1, 0.05, 0.25],\n    [0, 0.2, 0.4, 0.1, 0.3],\n    [0, 0.1, 0.3, 0.3, 0.3],\n    [0, 0, 0, 1, 0],\n    [0, 0, 0, 0, 1]\n])\n\ndef simulate_path():\n    state = 0\n    steps = 0\n\n    while state not in [3, 4] and steps &lt; 20:\n        state = np.random.choice(len(states), p=transition[state])\n        steps += 1\n\n    return state == 3\n\nsim = [simulate_path() for _ in range(5000)]\nprint(\"Estimated conversion rate:\", np.mean(sim))\n\n\nEstimated conversion rate: 0.305"
+    "text": "6. Markov Customer Journey Models\nCustomer journeys often involve transitions between marketing channels before conversion. A Markov chain can represent the transition process.\nExample states:\n\nAwareness\nWebsite\nCart\nPurchase\nExit\n\nMonte Carlo simulation can estimate conversion probabilities and path distributions.\n\n\nCode\nimport numpy as np\n\nstates = [\"Aware\", \"Visit\", \"Cart\", \"Purchase\", \"Exit\"]\n\ntransition = np.array([\n    [0, 0.6, 0.1, 0.05, 0.25],\n    [0, 0.2, 0.4, 0.1, 0.3],\n    [0, 0.1, 0.3, 0.3, 0.3],\n    [0, 0, 0, 1, 0],\n    [0, 0, 0, 0, 1]\n])\n\ndef simulate_path():\n    state = 0\n    steps = 0\n\n    while state not in [3, 4] and steps &lt; 20:\n        state = np.random.choice(len(states), p=transition[state])\n        steps += 1\n\n    return state == 3\n\nsim = [simulate_path() for _ in range(5000)]\nprint(\"Estimated conversion rate:\", np.mean(sim))\n\n\nEstimated conversion rate: 0.3268"
   },
   {
     "objectID": "posts/qwen-3.5-35B-Marketing/index.html#ab-testing-power-simulation",
     "href": "posts/qwen-3.5-35B-Marketing/index.html#ab-testing-power-simulation",
     "title": "Exploring qwen-3.5 35B",
     "section": "7. A/B Testing Power Simulation",
-    "text": "7. A/B Testing Power Simulation\nMonte Carlo simulation can estimate statistical power when analytic formulas are difficult or when metrics are non-normal.\n\n\nCode\nimport numpy as np\nfrom scipy.stats import ttest_ind\n\ndef simulate_power(n, effect, sims=2000, alpha=0.05):\n    detections = 0\n\n    for _ in range(sims):\n        control = np.random.normal(0, 1, n)\n        treatment = np.random.normal(effect, 1, n)\n\n        p = ttest_ind(control, treatment).pvalue\n        if p &lt; alpha:\n            detections += 1\n\n    return detections / sims\n\npower = simulate_power(100, 0.3)\nprint(\"Estimated power:\", power)\n\n\nEstimated power: 0.558\n\n\nMonte Carlo methods are especially useful when metrics are heavy-tailed, randomization units are complex, or cluster experiments are used."
+    "text": "7. A/B Testing Power Simulation\nMonte Carlo simulation can estimate statistical power when analytic formulas are difficult or when metrics are non-normal.\n\n\nCode\nimport numpy as np\nfrom scipy.stats import ttest_ind\n\ndef simulate_power(n, effect, sims=2000, alpha=0.05):\n    detections = 0\n\n    for _ in range(sims):\n        control = np.random.normal(0, 1, n)\n        treatment = np.random.normal(effect, 1, n)\n\n        p = ttest_ind(control, treatment).pvalue\n        if p &lt; alpha:\n            detections += 1\n\n    return detections / sims\n\npower = simulate_power(100, 0.3)\nprint(\"Estimated power:\", power)\n\n\nEstimated power: 0.555\n\n\nMonte Carlo methods are especially useful when metrics are heavy-tailed, randomization units are complex, or cluster experiments are used."
   },
   {
     "objectID": "posts/qwen-3.5-35B-Marketing/index.html#conclusion",
@@ -400,7 +388,7 @@
     "href": "posts/parameterized-markdown/index.html",
     "title": "Parameterizing Markdown",
     "section": "",
-    "text": "Last updated: 2026-03-11 23:26:47.039653\nTimezone: America/Los_Angeles"
+    "text": "Last updated: 2026-03-12 01:07:01.692724\nTimezone: America/Los_Angeles"
   },
   {
     "objectID": "posts/parameterized-markdown/index.html#iframe-and-pages",
@@ -491,7 +479,7 @@
     "href": "posts/Transparency-Shiny/index.html",
     "title": "A Shiny on Corruption Data",
     "section": "",
-    "text": "Last updated: 2026-03-11 23:26:22.906015\nTimezone: America/Los_Angeles"
+    "text": "Last updated: 2026-03-12 01:06:39.796447\nTimezone: America/Los_Angeles"
   },
   {
     "objectID": "posts/Transparency-Shiny/index.html#transparency-data",
@@ -540,21 +528,21 @@
     "href": "posts/Pigeons-Pallettes/index.html",
     "title": "Pigeons and Palettes",
     "section": "",
-    "text": "It really is an amazing pigeon. Apologies that I haven’t a photo credit for it; I found it one day on twitter as it went viral. It is a New York City pigeon.\n\n\n\nPigeon\n\n\nI want to color something with colors from that pigeon. First, I have to get the color palette.\n\n\n has a package called imgpalr that will extract colors from an image. If I need to, it is install.packages(\"imgpalr\").\nIn the following code chunk, I will load the package and then I want to point it to the pigeon image that I downloaded. In my case, it is in the same directory as the R Markdown file and is called Pigeon.png.\nInside the command image_pal(), I point it to an image, I specify how many colors [5], what type of color scheme, I want qualitative, and then some characteristics of the colors. The plot will show me the image alongside the palette though it is upside down.\n\n\nCode\nlibrary(imgpalr)\nPigeon.colors &lt;- image_pal(\"img/Pigeon.png\", # This will need to be adjusted to the actual file location on your computer.  Mine is in my downloads.\n          n = 20, # How many colors?\n          type = \"qual\", # Type of palette?\n          saturation = c(0.75, 1), \n          brightness = c(0.75, 1), \n          plot = TRUE, # Show the image and the palette?\n          bw = c(0.7, 0.95)\n          )\n\n\n\n\n\n\n\n\n\nCode\nPigeon.colors\n\n\n [1] \"#E995E3\" \"#EC72C9\" \"#D5A0F0\" \"#E487BB\" \"#96A9E3\" \"#F48DDB\" \"#96B5E6\"\n [8] \"#E87EC0\" \"#A0B3E5\" \"#F36BDC\" \"#DA97E3\" \"#EB7DC5\" \"#A0A6E6\" \"#FFB3D5\"\n[15] \"#AF98E6\" \"#E691DA\" \"#A39CE1\" \"#EEA2F4\" \"#EB98E2\" \"#F1A6EF\"\n\n\nNow I have a palette in the markdown environment called Pigeon.colors.\n\n\n\nNow I need some data; I want five categories to match my palette. The rest is junk.\n\n\nCode\nJunk.data &lt;- data.frame(Stuff=c(\"Hi\",\"Howdy\",\"Hello\",\"Hola\",\"Hallo\"), vals = runif(5, 0.4, 1))\nJunk.data\n\n\n  Stuff      vals\n1    Hi 0.8899648\n2 Howdy 0.9996561\n3 Hello 0.7241975\n4  Hola 0.4126834\n5 Hallo 0.8069597\n\n\nI want to graph it using a barplot equivalent because I have the height of the bars in vals. Let me use the fill aesthetic to fill the bars in by the five discrete things stored as Stuff. The trick to using it is to manually specify the colors and point it to the Pigeon.colors above.\n\n\nCode\nlibrary(ggplot2)\nggplot(Junk.data) + aes(x=Stuff, y=vals, fill=Stuff) + geom_col() + scale_fill_manual(values = Pigeon.colors) + hrbrthemes::theme_ipsum_rc()"
+    "text": "It really is an amazing pigeon. Apologies that I haven’t a photo credit for it; I found it one day on twitter as it went viral. It is a New York City pigeon.\n\n\n\nPigeon\n\n\nI want to color something with colors from that pigeon. First, I have to get the color palette.\n\n\n has a package called imgpalr that will extract colors from an image. If I need to, it is install.packages(\"imgpalr\").\nIn the following code chunk, I will load the package and then I want to point it to the pigeon image that I downloaded. In my case, it is in the same directory as the R Markdown file and is called Pigeon.png.\nInside the command image_pal(), I point it to an image, I specify how many colors [5], what type of color scheme, I want qualitative, and then some characteristics of the colors. The plot will show me the image alongside the palette though it is upside down.\n\n\nCode\nlibrary(imgpalr)\nPigeon.colors &lt;- image_pal(\"img/Pigeon.png\", # This will need to be adjusted to the actual file location on your computer.  Mine is in my downloads.\n          n = 20, # How many colors?\n          type = \"qual\", # Type of palette?\n          saturation = c(0.75, 1), \n          brightness = c(0.75, 1), \n          plot = TRUE, # Show the image and the palette?\n          bw = c(0.7, 0.95)\n          )\n\n\n\n\n\n\n\n\n\nCode\nPigeon.colors\n\n\n [1] \"#C7A0E4\" \"#F691EA\" \"#EF90E8\" \"#9FABE5\" \"#9AA9E1\" \"#FFB3D5\" \"#DFC19D\"\n [8] \"#E374BE\" \"#96A8DF\" \"#ED7ED6\" \"#A0B3E5\" \"#F48DDB\" \"#98B2E1\" \"#E490D8\"\n[15] \"#A3A1E6\" \"#DC9DE7\" \"#E79FEA\" \"#D5A0F0\" \"#E777D3\" \"#E99DEF\"\n\n\nNow I have a palette in the markdown environment called Pigeon.colors.\n\n\n\nNow I need some data; I want five categories to match my palette. The rest is junk.\n\n\nCode\nJunk.data &lt;- data.frame(Stuff=c(\"Hi\",\"Howdy\",\"Hello\",\"Hola\",\"Hallo\"), vals = runif(5, 0.4, 1))\nJunk.data\n\n\n  Stuff      vals\n1    Hi 0.7222195\n2 Howdy 0.7121211\n3 Hello 0.9586608\n4  Hola 0.5684462\n5 Hallo 0.6998438\n\n\nI want to graph it using a barplot equivalent because I have the height of the bars in vals. Let me use the fill aesthetic to fill the bars in by the five discrete things stored as Stuff. The trick to using it is to manually specify the colors and point it to the Pigeon.colors above.\n\n\nCode\nlibrary(ggplot2)\nggplot(Junk.data) + aes(x=Stuff, y=vals, fill=Stuff) + geom_col() + scale_fill_manual(values = Pigeon.colors) + hrbrthemes::theme_ipsum_rc()"
   },
   {
     "objectID": "posts/Pigeons-Pallettes/index.html#imgpalr",
     "href": "posts/Pigeons-Pallettes/index.html#imgpalr",
     "title": "Pigeons and Palettes",
     "section": "",
-    "text": "has a package called imgpalr that will extract colors from an image. If I need to, it is install.packages(\"imgpalr\").\nIn the following code chunk, I will load the package and then I want to point it to the pigeon image that I downloaded. In my case, it is in the same directory as the R Markdown file and is called Pigeon.png.\nInside the command image_pal(), I point it to an image, I specify how many colors [5], what type of color scheme, I want qualitative, and then some characteristics of the colors. The plot will show me the image alongside the palette though it is upside down.\n\n\nCode\nlibrary(imgpalr)\nPigeon.colors &lt;- image_pal(\"img/Pigeon.png\", # This will need to be adjusted to the actual file location on your computer.  Mine is in my downloads.\n          n = 20, # How many colors?\n          type = \"qual\", # Type of palette?\n          saturation = c(0.75, 1), \n          brightness = c(0.75, 1), \n          plot = TRUE, # Show the image and the palette?\n          bw = c(0.7, 0.95)\n          )\n\n\n\n\n\n\n\n\n\nCode\nPigeon.colors\n\n\n [1] \"#E995E3\" \"#EC72C9\" \"#D5A0F0\" \"#E487BB\" \"#96A9E3\" \"#F48DDB\" \"#96B5E6\"\n [8] \"#E87EC0\" \"#A0B3E5\" \"#F36BDC\" \"#DA97E3\" \"#EB7DC5\" \"#A0A6E6\" \"#FFB3D5\"\n[15] \"#AF98E6\" \"#E691DA\" \"#A39CE1\" \"#EEA2F4\" \"#EB98E2\" \"#F1A6EF\"\n\n\nNow I have a palette in the markdown environment called Pigeon.colors."
+    "text": "has a package called imgpalr that will extract colors from an image. If I need to, it is install.packages(\"imgpalr\").\nIn the following code chunk, I will load the package and then I want to point it to the pigeon image that I downloaded. In my case, it is in the same directory as the R Markdown file and is called Pigeon.png.\nInside the command image_pal(), I point it to an image, I specify how many colors [5], what type of color scheme, I want qualitative, and then some characteristics of the colors. The plot will show me the image alongside the palette though it is upside down.\n\n\nCode\nlibrary(imgpalr)\nPigeon.colors &lt;- image_pal(\"img/Pigeon.png\", # This will need to be adjusted to the actual file location on your computer.  Mine is in my downloads.\n          n = 20, # How many colors?\n          type = \"qual\", # Type of palette?\n          saturation = c(0.75, 1), \n          brightness = c(0.75, 1), \n          plot = TRUE, # Show the image and the palette?\n          bw = c(0.7, 0.95)\n          )\n\n\n\n\n\n\n\n\n\nCode\nPigeon.colors\n\n\n [1] \"#C7A0E4\" \"#F691EA\" \"#EF90E8\" \"#9FABE5\" \"#9AA9E1\" \"#FFB3D5\" \"#DFC19D\"\n [8] \"#E374BE\" \"#96A8DF\" \"#ED7ED6\" \"#A0B3E5\" \"#F48DDB\" \"#98B2E1\" \"#E490D8\"\n[15] \"#A3A1E6\" \"#DC9DE7\" \"#E79FEA\" \"#D5A0F0\" \"#E777D3\" \"#E99DEF\"\n\n\nNow I have a palette in the markdown environment called Pigeon.colors."
   },
   {
     "objectID": "posts/Pigeons-Pallettes/index.html#data-to-plot",
     "href": "posts/Pigeons-Pallettes/index.html#data-to-plot",
     "title": "Pigeons and Palettes",
     "section": "",
-    "text": "Now I need some data; I want five categories to match my palette. The rest is junk.\n\n\nCode\nJunk.data &lt;- data.frame(Stuff=c(\"Hi\",\"Howdy\",\"Hello\",\"Hola\",\"Hallo\"), vals = runif(5, 0.4, 1))\nJunk.data\n\n\n  Stuff      vals\n1    Hi 0.8899648\n2 Howdy 0.9996561\n3 Hello 0.7241975\n4  Hola 0.4126834\n5 Hallo 0.8069597\n\n\nI want to graph it using a barplot equivalent because I have the height of the bars in vals. Let me use the fill aesthetic to fill the bars in by the five discrete things stored as Stuff. The trick to using it is to manually specify the colors and point it to the Pigeon.colors above.\n\n\nCode\nlibrary(ggplot2)\nggplot(Junk.data) + aes(x=Stuff, y=vals, fill=Stuff) + geom_col() + scale_fill_manual(values = Pigeon.colors) + hrbrthemes::theme_ipsum_rc()"
+    "text": "Now I need some data; I want five categories to match my palette. The rest is junk.\n\n\nCode\nJunk.data &lt;- data.frame(Stuff=c(\"Hi\",\"Howdy\",\"Hello\",\"Hola\",\"Hallo\"), vals = runif(5, 0.4, 1))\nJunk.data\n\n\n  Stuff      vals\n1    Hi 0.7222195\n2 Howdy 0.7121211\n3 Hello 0.9586608\n4  Hola 0.5684462\n5 Hallo 0.6998438\n\n\nI want to graph it using a barplot equivalent because I have the height of the bars in vals. Let me use the fill aesthetic to fill the bars in by the five discrete things stored as Stuff. The trick to using it is to manually specify the colors and point it to the Pigeon.colors above.\n\n\nCode\nlibrary(ggplot2)\nggplot(Junk.data) + aes(x=Stuff, y=vals, fill=Stuff) + geom_col() + scale_fill_manual(values = Pigeon.colors) + hrbrthemes::theme_ipsum_rc()"
   },
   {
     "objectID": "posts/Inbox-Cleaning/index.html",
@@ -715,7 +703,7 @@
     "href": "posts/Docker-Shiny/index.html",
     "title": "Docker and Shiny",
     "section": "",
-    "text": "Last updated: 2026-03-11 23:25:23.494958\nTimezone: America/Los_Angeles\nWhen it comes to shiny applications, hosting is a perennial concern. The free alternative shinyapps.io works great but limits the number of user applications that can be deployed. One can operate a server and serve the shiny applications for one’s self. To be honest, this solution is probably superior but is also costly insofar as system administration consumes time. There is an in between that is worth exploring.\nWe could link to the apps and deploy them in the cloud. The most common methods for accomplishing this particular task involve Docker containers and using Docker to run the shiny applications. I want to explore this alternative in what follows."
+    "text": "Last updated: 2026-03-12 01:05:46.924862\nTimezone: America/Los_Angeles\nWhen it comes to shiny applications, hosting is a perennial concern. The free alternative shinyapps.io works great but limits the number of user applications that can be deployed. One can operate a server and serve the shiny applications for one’s self. To be honest, this solution is probably superior but is also costly insofar as system administration consumes time. There is an in between that is worth exploring.\nWe could link to the apps and deploy them in the cloud. The most common methods for accomplishing this particular task involve Docker containers and using Docker to run the shiny applications. I want to explore this alternative in what follows."
   },
   {
     "objectID": "posts/Docker-Shiny/index.html#shiny-server.conf",
@@ -827,7 +815,7 @@
     "href": "posts/InteractiveVisualization/index.html",
     "title": "Interactive Visualizations",
     "section": "",
-    "text": "Last updated: 2026-03-11 23:26:02.197047\nTimezone: America/Los_Angeles"
+    "text": "Last updated: 2026-03-12 01:06:21.150912\nTimezone: America/Los_Angeles"
   },
   {
     "objectID": "posts/InteractiveVisualization/index.html#the-plotly-package",
@@ -862,7 +850,7 @@
     "href": "posts/Rstudio-Github/index.html",
     "title": "Connecting RStudio and Github",
     "section": "",
-    "text": "Last updated: 2026-03-11 23:26:20.432959\nTimezone: America/Los_Angeles"
+    "text": "Last updated: 2026-03-12 01:06:36.422553\nTimezone: America/Los_Angeles"
   },
   {
     "objectID": "posts/Rstudio-Github/index.html#connecting-rstudio-and-github",
@@ -876,7 +864,7 @@
     "href": "posts/Trump-Dissent/index.html",
     "title": "A Dissent in the Trump 14th Amendment Case?",
     "section": "",
-    "text": "Last updated: 2026-03-11 23:26:39.689193\nTimezone: America/Los_Angeles"
+    "text": "Last updated: 2026-03-12 01:06:55.452057\nTimezone: America/Los_Angeles"
   },
   {
     "objectID": "posts/Trump-Dissent/index.html#the-trump-case",
@@ -1135,7 +1123,7 @@
     "href": "research.html",
     "title": "Research",
     "section": "",
-    "text": "Causal Inference\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultiple Rater Research\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPanel Data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPolitical Economy Research\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPolitical Methodology Research\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "Causal Inference\n\n\nMultiple Rater\n\n\nPanel Data\n\n\nPolitical Economy\n\n\nPolitical Methodology",
     "crumbs": [
       "Research"
     ]
@@ -1209,20 +1197,9 @@
   {
     "objectID": "teaching/BUS1301/index.html",
     "href": "teaching/BUS1301/index.html",
-    "title": "Courses: BUS 1301 - Managing with Data and AI",
+    "title": "BUS 1301 - Managing with Data and AI",
     "section": "",
-    "text": "This course will introduce students to how managers and organizations collect, process, and interpret observations about the world around them to facilitate informed decisions with the aid of models including those of artificial intelligence. The first portion of the course introduces students to models, the concept of data, and the use of data in workplace settings. Students will learn different practical methods of data gathering – from surveys and archives to experiments and crowd sourcing and explore basic methods of organizing data for robust and sustainable deployment. With data in hand, we explore how managers can use data, highlighting the incredible value resulting from cross tabulation, frequency distributions, and simple plots. This value is enhanced with basic statistical inference and populating models with data. One of the greatest barriers to linking data and decisions was the necessary computing; artificial intelligence tools have fundamentally changed that. The final portion of the course will focus on the use of artificial intelligence (AI), highlighting general features of how commonly deployed AI systems function and how they can solve challenges across various areas of business and explore the likely future.\nInformation is a resource; it should be used judiciously and efficiently. While a wealth of information is available at our fingertips, high quality information can remain a surprisingly scarce resource. We are inundated with data, facts, and figures that only become actionable through identifying meaningful patterns and trends, developing fundamental managerial insights, and extracting information essential to inform effective managerial decisions. The tools of this course are among the most important tools of effective managers.\nWhile effective, there is a sense in which limitations imposed by linking decisions to measures and data are reductionist, potentially misleading, and pose potentially deep ethical challenges. Mindful of the central role that ethics must play in shaping organizational pursuits, we will tackle these challenges head on though only you can ground these in your deepest moral sentiments.\n\nThere is a course website.",
-    "crumbs": [
-      "Teaching",
-      "BUS 1301: AI Data/Management"
-    ]
-  },
-  {
-    "objectID": "teaching/BUS1301/index.html#bus-1301-managing-with-data-analytics-and-artificial-intelligence",
-    "href": "teaching/BUS1301/index.html#bus-1301-managing-with-data-analytics-and-artificial-intelligence",
-    "title": "Courses: BUS 1301 - Managing with Data and AI",
-    "section": "",
-    "text": "This course will introduce students to how managers and organizations collect, process, and interpret observations about the world around them to facilitate informed decisions with the aid of models including those of artificial intelligence. The first portion of the course introduces students to models, the concept of data, and the use of data in workplace settings. Students will learn different practical methods of data gathering – from surveys and archives to experiments and crowd sourcing and explore basic methods of organizing data for robust and sustainable deployment. With data in hand, we explore how managers can use data, highlighting the incredible value resulting from cross tabulation, frequency distributions, and simple plots. This value is enhanced with basic statistical inference and populating models with data. One of the greatest barriers to linking data and decisions was the necessary computing; artificial intelligence tools have fundamentally changed that. The final portion of the course will focus on the use of artificial intelligence (AI), highlighting general features of how commonly deployed AI systems function and how they can solve challenges across various areas of business and explore the likely future.\nInformation is a resource; it should be used judiciously and efficiently. While a wealth of information is available at our fingertips, high quality information can remain a surprisingly scarce resource. We are inundated with data, facts, and figures that only become actionable through identifying meaningful patterns and trends, developing fundamental managerial insights, and extracting information essential to inform effective managerial decisions. The tools of this course are among the most important tools of effective managers.\nWhile effective, there is a sense in which limitations imposed by linking decisions to measures and data are reductionist, potentially misleading, and pose potentially deep ethical challenges. Mindful of the central role that ethics must play in shaping organizational pursuits, we will tackle these challenges head on though only you can ground these in your deepest moral sentiments.\n\nThere is a course website.",
+    "text": "This course introduces students to how managers and organizations collect, process, and interpret observations about the world around them to facilitate informed decisions with the aid of models including those of artificial intelligence. The first portion of the course introduces students to models, the concept of data, and the use of data in workplace settings. Students will learn different practical methods of data gathering – from surveys and archives to experiments and crowd sourcing and explore basic methods of organizing data for robust and sustainable deployment. With data in hand, we explore how managers can use data, highlighting the incredible value resulting from cross tabulation, frequency distributions, and simple plots. This value is enhanced with basic statistical inference and populating models with data. One of the greatest barriers to linking data and decisions was the necessary computing; artificial intelligence tools have fundamentally changed that. The final portion of the course will focus on the use of artificial intelligence (AI), highlighting general features of how commonly deployed AI systems function and how they can solve challenges across various areas of business and explore the likely future.\nInformation is a resource; it should be used judiciously and efficiently. While a wealth of information is available at our fingertips, high quality information can remain a surprisingly scarce resource. We are inundated with data, facts, and figures that only become actionable through identifying meaningful patterns and trends, developing fundamental managerial insights, and extracting information essential to inform effective managerial decisions. The tools of this course are among the most important tools of effective managers.\nWhile effective, there is a sense in which limitations imposed by linking decisions to measures and data are reductionist, potentially misleading, and pose potentially deep ethical challenges. Mindful of the central role that ethics must play in shaping organizational pursuits, we will tackle these challenges head on though only you can ground these in your deepest moral sentiments.\n\nThere is a course website.",
     "crumbs": [
       "Teaching",
       "BUS 1301: AI Data/Management"
@@ -1231,7 +1208,7 @@
   {
     "objectID": "teaching/DADM/index.html",
     "href": "teaching/DADM/index.html",
-    "title": "Courses: Data Analysis, Modeling, and Decision-Making",
+    "title": "Data Analysis, Modeling, and Decision-Making",
     "section": "",
     "text": "DADM 622/5103 is the core/required statistics and data course in the Atkinson Graduate School of Management. The course presents an overview of data, statistic, and decision-making as a core part of the Atkinson MBA experience. While most of the materials are available via the learning management system, I am increasingly migrating to something I have more control over because learning management systems change.\n\nThe Fall 2025 Professionals in Salem website\nThe Fall 2025 Professionals in Portland website\n\n\n\nThere is a set of occasionally and frequently asked questions for this course.\n\n\n\n\n\n\nA Slide Collection",
     "crumbs": [
@@ -1242,18 +1219,7 @@
   {
     "objectID": "teaching/Essex/index.html",
     "href": "teaching/Essex/index.html",
-    "title": "Courses: Panel Data at Essex",
-    "section": "",
-    "text": "The course begins with an overview that presents some key review and background with a focus on linear models. From that foundation, we complete our one week course in time series analysis focusing on univariate time series models, intervention analysis, stationarity, dynamic linear models, structural models, Vector Autoregression, cointegration, and generalized ARCH models. The second week begins by discussing characteristics and types of pooled data and underlying assumptions of basic statistical models for panel data before turning to complex error structures, different kinds of heterogeneity (e.g. unit and slope), dynamic specification issues (lag structures), missing data, spatial heterogeneity and dependency, time invariant and rarely changing variables in panel data analysis with correlated unit specific effects among others. Furthermore, we will look at different data generating processes and adequate estimation procedures for e.g. binary choice and limited dependent variable models.\n\nThere is a course website.",
-    "crumbs": [
-      "Teaching",
-      "Essex"
-    ]
-  },
-  {
-    "objectID": "teaching/Essex/index.html#panel-data-at-essex",
-    "href": "teaching/Essex/index.html#panel-data-at-essex",
-    "title": "Courses: Panel Data at Essex",
+    "title": "Panel Data at Essex",
     "section": "",
     "text": "The course begins with an overview that presents some key review and background with a focus on linear models. From that foundation, we complete our one week course in time series analysis focusing on univariate time series models, intervention analysis, stationarity, dynamic linear models, structural models, Vector Autoregression, cointegration, and generalized ARCH models. The second week begins by discussing characteristics and types of pooled data and underlying assumptions of basic statistical models for panel data before turning to complex error structures, different kinds of heterogeneity (e.g. unit and slope), dynamic specification issues (lag structures), missing data, spatial heterogeneity and dependency, time invariant and rarely changing variables in panel data analysis with correlated unit specific effects among others. Furthermore, we will look at different data generating processes and adequate estimation procedures for e.g. binary choice and limited dependent variable models.\n\nThere is a course website.",
     "crumbs": [

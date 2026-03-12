@@ -4,8 +4,8 @@
     "items": [
       "/teaching/BUS1301/index.html",
       "/teaching/ChoiceForecasting/index.html",
-      "/teaching/DADM/index.html",
       "/teaching/DataCommunication/index.html",
+      "/teaching/DADM/index.html",
       "/teaching/Essex/index.html"
     ]
   },
@@ -48,16 +48,6 @@
       "/posts/Pigeons-Pallettes/index.html",
       "/posts/A Data Visualization/index.html",
       "/posts/Griffin-Park/index.html"
-    ]
-  },
-  {
-    "listing": "/research.html",
-    "items": [
-      "/research/causal-inference.html",
-      "/research/multiple-rater.html",
-      "/research/panel-data.html",
-      "/research/political-economy.html",
-      "/research/political-methodology.html"
     ]
   }
 ]

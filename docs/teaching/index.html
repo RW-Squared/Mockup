@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-45e8e462cd760eca75dbd85b13f1b7a2.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-922cbfd3e6a0026e284bf6c0a43da2f5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-0dbf6426c0a48c1f2c0baba562816380.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,9 +81,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -133,9 +133,11 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../css/cgpt-cards.css">
-<link rel="stylesheet" href="../css/cgpt-circles.css">
+<link rel="stylesheet" href="../css/custom-circles.css">
 <link rel="stylesheet" href="../css/floating-card-standalone.css">
 <link rel="stylesheet" href="../css/navbar-branding.css">
+<link rel="stylesheet" href="../css/cgpt-circles-research.css">
+<link rel="stylesheet" href="../css/cgpt-circles-listing.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light">
@@ -274,10 +276,9 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-body" id="quarto-document-content">
+<main class="content column-page-right" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -286,7 +287,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta column-body">
+<div class="quarto-title-meta column-page-right">
 
     
   
@@ -298,38 +299,13 @@ window.Quarto = {
 </header>
 
 
-<section id="courses" class="level2">
-<h2 class="anchored" data-anchor-id="courses">Courses</h2>
 
 
 
-</section>
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1773198251463" data-listing-reading-time-sort="2" data-listing-word-count-sort="327">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1773301569364" data-listing-reading-time-sort="2" data-listing-word-count-sort="326">
 <a href="../teaching/BUS1301/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -337,15 +313,12 @@ window.Quarto = {
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Courses: BUS 1301 - Managing with Data and AI
+BUS 1301 - Managing with Data and AI
 </h5>
-<div class="card-text listing-description delink">
-This course will introduce students to how managers and organizations collect, process, and interpret observations about the world around them to facilitate informed…
-</div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1773198251464" data-listing-reading-time-sort="2" data-listing-word-count-sort="220">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1773301670616" data-listing-reading-time-sort="2" data-listing-word-count-sort="220">
 <a href="../teaching/ChoiceForecasting/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -353,31 +326,12 @@ This course will introduce students to how managers and organizations collect, p
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Courses: Choice and Forecasting
+Choice and Forecasting
 </h5>
-<div class="card-text listing-description delink">
-Models of Choice and Forecasting is intended to augment a first course in linear regression with extensions of linear models to <em>generalized linear models</em> for a broader array…
-</div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1773198251465" data-listing-reading-time-sort="1" data-listing-word-count-sort="112">
-<a href="../teaching/DADM/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../teaching/DADM/DADMp.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Courses: Data Analysis, Modeling, and Decision-Making
-</h5>
-<div class="card-text listing-description delink">
-DADM 622/5103 is the core/required statistics and data course in the Atkinson Graduate School of Management. The course presents an overview of data, statistic, and…
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1773198251466" data-listing-reading-time-sort="1" data-listing-word-count-sort="100">
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1773301525551" data-listing-reading-time-sort="1" data-listing-word-count-sort="100">
 <a href="../teaching/DataCommunication/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -385,15 +339,25 @@ DADM 622/5103 is the core/required statistics and data course in the Atkinson Gr
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Courses: Communicating With Data
+Communicating With Data
 </h5>
-<div class="card-text listing-description delink">
-Communicating with Data is a cross-listed course in the graduate school of Management and the Data Science program. In the course, we explore communication tools…
-</div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1773198251467" data-listing-reading-time-sort="1" data-listing-word-count-sort="150">
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1773301432602" data-listing-reading-time-sort="1" data-listing-word-count-sort="112">
+<a href="../teaching/DADM/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../teaching/DADM/DADMp.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Data Analysis, Modeling, and Decision-Making
+</h5>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1773301505411" data-listing-reading-time-sort="1" data-listing-word-count-sort="150">
 <a href="../teaching/Essex/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -401,11 +365,8 @@ Communicating with Data is a cross-listed course in the graduate school of Manag
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Courses: Panel Data at Essex
+Panel Data at Essex
 </h5>
-<div class="card-text listing-description delink">
-The course begins with an overview that presents some key review and background with a focus on linear models. From that foundation, we complete our one week course in time…
-</div>
 </div>
 </div></a>
 </div>

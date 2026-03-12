@@ -1,8 +1,33 @@
 ---
 title: "Research"
-listing:
-  contents: research # The folder created by the script
-  type: grid
-  page-size: 12
-page-layout: full
 ---
+
+::: {.research-hero-overlay .mid-page-start}
+::: {.home-bubble-minimal}
+
+::: {.circle-grid .single-row}
+
+::: {.circle-card}
+[Causal Inference](research/causal-inference.qmd)
+:::
+
+::: {.circle-card}
+[Multiple Rater](research/multiple-rater.qmd)
+:::
+
+
+::: {.circle-card}
+[Panel Data](research/panel-data.qmd)
+:::
+
+::: {.circle-card}
+[Political Economy](research/political-economy.qmd)
+:::
+
+::: {.circle-card}
+[Political Methodology](research/political-methodology.qmd)
+:::
+
+:::
+:::
+:::

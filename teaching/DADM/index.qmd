@@ -1,5 +1,5 @@
 ---
-title: "Courses: Data Analysis, Modeling, and Decision-Making"
+title: "Data Analysis, Modeling, and Decision-Making"
 image: "DADMp.png"
 ---
 

@@ -2,14 +2,8 @@
 title: "Teaching"
 listing:
   contents: /
-  sort: "date desc"
   type: grid
-  categories: true
-  sort-ui: true
-  filter-ui: true
   page-size: 12
-  fields: [image, date, title, description, categories]
+  fields: [image, title]
 page-layout: full
 ---
-
-## Courses

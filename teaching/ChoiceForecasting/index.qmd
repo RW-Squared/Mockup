@@ -1,9 +1,7 @@
 ---
-title: "Courses: Choice and Forecasting"
+title: "Choice and Forecasting"
 image: "CAF.png"
 ---
-
-## Models of Choice and Forecasting
 
 Models of Choice and Forecasting is intended to augment a first course in linear regression with extensions of linear models to *generalized linear models* for a broader array of data types and a dive into time series regression and forecasting.
 

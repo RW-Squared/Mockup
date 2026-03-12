@@ -1,0 +1,232 @@
+/* ==========================================
+   RESEARCH PAGE - LANDING PAGE STYLE
+   Same minimal circle layout, sidebar hidden
+   ========================================== */
+
+/* Hide sidebar completely on research page */
+body:has(.research-hero-overlay) .sidebar,
+body:has(.research-hero-overlay) #quarto-sidebar,
+body:has(.research-hero-overlay) .sidebar-navigation,
+body:has(.research-hero-overlay) #quarto-margin-sidebar {
+  display: none !important;
+}
+
+/* Remove sidebar spacing/padding from body */
+body:has(.research-hero-overlay) #quarto-content {
+  min-height: auto !important;
+  padding-top: 25vh !important;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  flex: 1 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* Remove column width constraints */
+body:has(.research-hero-overlay) .column-body,
+body:has(.research-hero-overlay) .column-page,
+body:has(.research-hero-overlay) .column-body-outset,
+body:has(.research-hero-overlay) .page-columns {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  grid-template-columns: 1fr !important;
+}
+
+/* Remove main content frame/card on research page */
+body:has(.research-hero-overlay) main.content,
+body:has(.research-hero-overlay) .page-layout-article .content,
+body:has(.research-hero-overlay) .page-layout-custom .content {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  flex: 0 0 auto !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 10% !important;
+  border-radius: 0 !important;
+}
+
+/* Remove the overlay gradient ::before element */
+body:has(.research-hero-overlay) main.content::before,
+body:has(.research-hero-overlay) .page-layout-article .content::before,
+body:has(.research-hero-overlay) .page-layout-custom .content::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* Make body full height with flexbox */
+body:has(.research-hero-overlay) {
+  min-height: 100vh !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow-y: auto !important;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Research page title styling (periwinkle, Cinzel) */
+body:has(.research-hero-overlay) h1.title,
+body:has(.research-hero-overlay) .title {
+  text-align: left !important;
+  font-family: 'Cinzel', Georgia, serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #9CA6E3 !important;
+}
+
+/* Content wrapper styling */
+.research-hero-overlay.mid-page-start {
+  margin-top: 0;
+  min-height: auto;
+  max-height: none;
+  padding: 0 2rem 0.5rem 0;
+  overflow: visible;
+  width: 100%;
+}
+
+/* Lead text styling */
+.research-hero-overlay .lead-minimal {
+  font-size: 0.95rem;
+  line-height: 1.2;
+  color: rgba(243, 241, 250, 0.7);
+  max-width: 450px;
+  margin: 0 0 0.2rem 0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  opacity: 0.85;
+  text-align: left;
+}
+
+/* Footer styling */
+body:has(.research-hero-overlay) .nav-footer,
+body:has(.research-hero-overlay) .page-footer {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+  font-size: 0.75rem !important;
+}
+
+/* Circle grid styling - same as landing page */
+body:has(.research-hero-overlay) .circle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  max-width: 720px;
+  margin: 0;
+  padding: 0;
+  justify-items: start;
+}
+
+body:has(.research-hero-overlay) .circle-grid.single-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  max-width: 720px;
+  justify-items: start;
+}
+
+/* Circle cards - same as landing page */
+body:has(.research-hero-overlay) .circle-card {
+  position: relative;
+  width: 173px;
+  height: 173px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+body:has(.research-hero-overlay) .circle-card a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(218, 153, 230, 0.25);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15), 0 0 25px rgba(218,153,230,0.08);
+  color: #E8BADB;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.28rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 1.2rem;
+  text-transform: uppercase;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: floatSpot 6s ease-in-out infinite;
+}
+
+/* Hover effects - same as landing page */
+body:has(.research-hero-overlay) .circle-card a:hover {
+  transform: translateY(-12px) scale(1.15) !important;
+  border-color: rgba(232, 186, 219, 0.5);
+  background: rgba(232, 186, 219, 0.08);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.25),
+    0 0 50px rgba(232, 186, 219, 0.3);
+  color: #F5D5EC;
+  animation: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body:has(.research-hero-overlay) #quarto-content {
+    padding-top: 20vh !important;
+  }
+
+  body:has(.research-hero-overlay) main.content {
+    padding-left: 8% !important;
+  }
+
+  body:has(.research-hero-overlay) .circle-card {
+    width: 168px;
+    height: 168px;
+  }
+
+  body:has(.research-hero-overlay) .circle-card a {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body:has(.research-hero-overlay) #quarto-content {
+    padding-top: 15vh !important;
+  }
+
+  body:has(.research-hero-overlay) main.content {
+    padding-left: 5% !important;
+  }
+
+  body:has(.research-hero-overlay) .circle-card {
+    width: 152px;
+    height: 152px;
+  }
+
+  body:has(.research-hero-overlay) .circle-card a {
+    font-size: 1.12rem;
+  }
+
+  body:has(.research-hero-overlay) .circle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
