@@ -42,7 +42,7 @@ website:
         href: mailto:rwalker@willamette.edu
         aria-label: Email
       - icon: github
-        href: https://github.com/robertwwalker
+        href: https://github.com/robertwwalker/Mockup/
         aria-label: GitHub
       - icon: twitter
         href: https://twitter.com/PieRatio
