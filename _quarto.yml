@@ -88,14 +88,7 @@ format:
   html:
     theme:
       - cosmo
-      - css/steampunk-custom.scss
-    css:
-      - css/cgpt-cards.css
-      - css/custom-circles.css
-      - css/floating-card-standalone.css
-      - css/navbar-branding.css
-      - css/cgpt-circles-research.css
-      - css/cgpt-circles-listing.css
+      - css/custom-dropin-replacement-v2.scss
     toc: false
     smooth-scroll: true
     link-external-newwindow: true
