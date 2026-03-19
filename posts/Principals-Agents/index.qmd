@@ -1,0 +1,174 @@
+---
+title: "Solutions to Principal–Agent Problems"
+subtitle: "Corporations, Public Agencies, Banking, and Executive Compensation"
+author: "RWW with ChatGPT"
+date: "2026-03-19"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+## Executive summary
+
+Principal–agent problems arise when a principal delegates authority to an agent whose incentives, information, or risk preferences differ from the principal’s. In the canonical agency-theory framing, the resulting **agency costs** include monitoring costs, bonding costs, and residual loss.^[Michael C. Jensen and William H. Meckling, “Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure,” *Journal of Financial Economics* 3, no. 4 (1976): 305–360, <https://doi.org/10.1016/0304-405X(76)90026-X>.] The practical question is therefore not how to eliminate agency problems altogether, but how to **reduce** them through institutional design.
+
+Across sectors, the main solution families are consistent:
+
+1. **Align incentives** so agents benefit when principals’ objectives are achieved.
+2. **Improve monitoring** through reporting, audits, supervision, and independent review.
+3. **Reduce information asymmetry** through disclosure and better performance measures.
+4. **Constrain discretion** through approvals, segregation of duties, and legal duties.
+5. **Strengthen ex post accountability** through clawbacks, sanctions, and corrective action.
+6. **Select and socialize agents better** through screening, independence requirements, training, and culture.
+
+The optimal mix varies by sector. In corporations, the center of gravity is board oversight, disclosure, and compensation design. In public agencies, formal control systems and multilayered oversight matter more because goals are multiple and outputs are often hard to price. In banking, leverage and systemic risk make ordinary corporate governance insufficient, so prudential supervision, independent risk management, and risk-sensitive compensation are central. Executive compensation is best understood not as a separate field, but as one of the primary tools for managing corporate and banking agency problems.
+
+## 1. The basic logic of agency solutions
+
+Jensen and Meckling’s classic formulation remains the starting point: once ownership and control are separated, managers may consume perquisites, shirk, or pursue strategies that benefit themselves more than outside owners, and principals incur costs to monitor and bond those managers.^[Jensen and Meckling, “Theory of the Firm.”] Holmström’s work on moral hazard sharpened the next step in the analysis: when effort cannot be directly observed, compensation and evaluation should be tied to **informative performance signals**, not merely to whatever outcomes are easiest to count.^[Bengt Holmström, “Moral Hazard and Observability,” *The Bell Journal of Economics* 10, no. 1 (1979): 74–91, <https://www.jstor.org/stable/3003320>.]
+
+That insight immediately suggests a practical governance lesson. No single remedy is sufficient. High-powered incentives can create manipulation or excessive risk-taking if performance measures are noisy or incomplete. Monitoring can become formalistic if the monitors are weak, captured, or poorly informed. Hard rules can reduce discretion but also create rigidity and box-checking. The recurring policy response is therefore to build a **bundle** of mutually reinforcing mechanisms: incentives, disclosure, internal controls, independent oversight, and corrective action.
+
+## 2. Corporations
+
+### 2.1 The core agency problem
+
+In corporations, the classic agency problem lies between shareholders and managers. Shareholders generally want durable enterprise value; managers may have incentives to maximize compensation, protect their positions, expand the firm beyond efficient scale, smooth bad news, or privilege short-term market reactions over long-run value creation.^[Jensen and Meckling, “Theory of the Firm.”]
+
+### 2.2 Main solutions
+
+#### 2.2.1 Board oversight
+
+The G20/OECD Principles of Corporate Governance treat the board as the central internal monitor of management. The board’s role includes strategic guidance, monitoring managerial performance, overseeing risk management and internal control systems, and ensuring the integrity of corporate reporting and key governance processes.^[OECD, *G20/OECD Principles of Corporate Governance 2023* (Paris: OECD Publishing, 2023), <https://www.oecd.org/en/publications/g20-oecd-principles-of-corporate-governance-2023_ed750b30-en.html>; PDF at <https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/09/g20-oecd-principles-of-corporate-governance-2023_60836fcb/ed750b30-en.pdf>.] In practice, this means effective boards are expected to be informed, sufficiently independent, and institutionally capable of challenging management rather than merely ratifying its decisions.
+
+#### 2.2.2 Disclosure and transparency
+
+Public reporting reduces managers’ information advantage over shareholders, creditors, analysts, and regulators. The OECD Principles emphasize timely and accurate disclosure of material matters, including financial and operating results, governance structures, related-party transactions, and remuneration policies.^[OECD, *G20/OECD Principles of Corporate Governance 2023*.] Disclosure does not by itself align interests, but it makes opportunism more visible and therefore more costly.
+
+#### 2.2.3 Internal controls and separation of functions
+
+An important corporate response to agency risk is structural rather than purely contractual. Firms commonly separate proposal, approval, execution, and audit. Material related-party transactions may require independent review; internal audit and compliance functions are set apart from ordinary profit centers; and major transactions often require committee or board approval. These arrangements make it harder for a single agent to control both the decision and the information used to evaluate it.^[OECD, *G20/OECD Principles of Corporate Governance 2023*.]
+
+#### 2.2.4 Better compensation design
+
+Compensation can mitigate agency problems, but only when it is designed around informative and reasonably complete performance measures. Holmström’s moral-hazard framework implies that optimal contracts should condition rewards on signals that reveal managerial contribution rather than mere luck.^[Holmström, “Moral Hazard and Observability.”] That logic supports the modern use of mixed pay packages: fixed salary, annual bonuses, long-term incentives, deferred equity exposure, and sometimes nonfinancial metrics such as safety, compliance, retention, or product quality.
+
+### 2.3 Main limitation
+
+Corporate governance can fail when incentives and monitoring are misaligned at the same time. A board that is formally independent but informationally dependent on management may not monitor well. A compensation plan that rewards stock-price appreciation over a short horizon may encourage earnings management or excessive risk. Corporate agency problems are therefore best addressed through **bundled governance**, not through compensation or disclosure alone.^[OECD, *G20/OECD Principles of Corporate Governance 2023*.]
+
+## 3. Public agencies
+
+### 3.1 Why agency problems are harder in the public sector
+
+Public administration involves longer and more layered delegation chains than the typical firm. Citizens delegate to elected officials; elected officials delegate to agency leaders; agency leaders delegate to managers and front-line personnel. Goals are often plural, politically contested, and only partly measurable. Unlike corporate settings, there is often no market-price signal that straightforwardly summarizes performance.
+
+That is why public-sector principal–agent problems often take the form of mission drift, weak implementation, procedural evasion, budget maximization, compliance failures, or the substitution of organizational convenience for statutory purpose.
+
+### 3.2 Main solutions
+
+#### 3.2.1 Internal control systems
+
+GAO’s *Standards for Internal Control in the Federal Government*—the Green Book—states that internal control should be designed, implemented, and operated to achieve objectives relating to operations, reporting, and compliance.^[U.S. Government Accountability Office, *Standards for Internal Control in the Federal Government* (Green Book), GAO-25-107721 (Washington, DC: GAO, 2025), <https://www.gao.gov/products/gao-25-107721>; PDF at <https://www.gao.gov/assets/gao-25-107721.pdf>.] The Green Book’s framework emphasizes control environment, risk assessment, control activities, information and communication, and monitoring. In agency-theory terms, it is a systematic attempt to reduce hidden action, documentation gaps, and unreviewable discretion.
+
+#### 3.2.2 Management accountability and risk management
+
+OMB Circular A-123 provides government-wide guidance on management’s responsibility for internal control. The March 10, 2026 revision states that the Circular provides guidance for establishing internal control and managing risk in federal agencies.^[Office of Management and Budget, *OMB Circular No. A-123: Management’s Responsibility for Internal Control* (Washington, DC: The White House, revised March 10, 2026), <https://www.whitehouse.gov/omb/information-resources/guidance/circulars/>; PDF at <https://www.whitehouse.gov/wp-content/uploads/2026/03/OMB-Circular-No.-A-123-2026.pdf>.] This matters because public agency problems are not only about fraud or financial misstatement; they are also about operational weakness, poor program execution, and unmanaged mission risk.
+
+#### 3.2.3 Layered oversight
+
+Public agencies are monitored by more than one principal-side institution: internal management, inspectors general, legislative committees, auditors, budget officials, courts, and the public record. This multiplicity is costly, but it is rational in a setting where no single performance metric can adequately discipline agents. When direct market feedback is weak, reviewability, transparency, and contestability become substitutes for price signals.^[GAO, *Standards for Internal Control in the Federal Government*; OMB, *Circular No. A-123*.]
+
+#### 3.2.4 Procedural constraints and segregation of duties
+
+Procurement rules, grant rules, documentation requirements, conflict-of-interest restrictions, and approval chains often appear burdensome, but they are also anti-agency-loss mechanisms. They narrow the set of decisions that can be made privately and create trails that allow later review.^[GAO, *Standards for Internal Control in the Federal Government*.]
+
+### 3.3 Main limitation
+
+High-powered incentive pay is often a weak solution in the public sector because outcomes are noisy, delayed, politically conditioned, and multidimensional. For that reason, public-sector agency control relies more heavily on process integrity, documentation, risk management, and layered oversight than on aggressive variable pay.^[GAO, *Standards for Internal Control in the Federal Government*; OMB, *Circular No. A-123*.]
+
+## 4. Banking
+
+### 4.1 Why agency problems are especially severe in banking
+
+Banking magnifies ordinary agency problems because banks are highly leveraged, often opaque, and capable of shifting part of the downside of risky behavior to deposit insurers, creditors, or the broader financial system. Managers and traders may therefore have stronger incentives than owners or supervisors to pursue short-run gains that embed long-run tail risk.
+
+### 4.2 Main solutions
+
+#### 4.2.1 Prudential supervision in addition to firm-level governance
+
+The Basel Committee’s *Core Principles for Effective Banking Supervision* describe the Core Principles as the de facto minimum standards for the sound prudential regulation and supervision of banks and banking systems.^[Basel Committee on Banking Supervision, *Core Principles for Effective Banking Supervision* (Bank for International Settlements, revised April 2024), <https://www.bis.org/bcbs/publ/d573.htm>; PDF at <https://www.bis.org/bcbs/publ/d573.pdf>.] This is important conceptually: in banking, market governance and ordinary shareholder oversight are treated as necessary but not sufficient. External supervision exists precisely because internal governance alone may not fully contain risk-shifting incentives.
+
+#### 4.2.2 Governance standards tailored to banks
+
+The Basel Committee’s *Corporate Governance Principles for Banks* state that sound corporate governance in banks includes effective oversight by the board, clear responsibility lines, robust risk governance, and strong control functions.^[Basel Committee on Banking Supervision, *Corporate Governance Principles for Banks* (Bank for International Settlements, July 2015), <https://www.bis.org/bcbs/publ/d328.htm>; PDF at <https://www.bis.org/bcbs/publ/d328.pdf>.] The document gives special emphasis to the distinction between business-line management and independent control functions, reflecting the fact that profit centers may otherwise dominate risk disciplines.
+
+#### 4.2.3 Independent risk management and compliance
+
+The renewed U.S. interagency proposal on incentive-based compensation arrangements, approved by the FDIC Board in May 2024, emphasizes independent risk management and compliance frameworks and board-level compensation governance for covered institutions.^[Federal Deposit Insurance Corporation, *Incentive-Based Compensation Arrangements* (Notice of Proposed Rulemaking materials, May 2024), <https://www.fdic.gov/news/inactive-financial-institution-letters/2024/incentive-based-compensation-arrangements>; PDF at <https://www.fdic.gov/sites/default/files/2024-05/2024-05-03-incentive-based-compensation-agreements.pdf>.] That approach is textbook agency control: the agents who generate revenue should not be the only ones who define the risk consequences of how that revenue is produced.
+
+#### 4.2.4 Examination and corrective action
+
+The FDIC’s *Risk Management Manual of Examination Policies* explains that examinations are conducted to ensure public confidence in the banking system and protect the Deposit Insurance Fund, and that on-site examinations identify undue risks and weak risk management practices.^[Federal Deposit Insurance Corporation, *Risk Management Manual of Examination Policies* (current complete manual), <https://www.fdic.gov/risk-management-manual-examination-policies>; PDF at <https://www.fdic.gov/resources/supervision-and-examinations/examination-policies-manual/risk-management-manual-complete.pdf>.] Examiners therefore function as an external monitoring technology aimed at identifying agency-driven weaknesses before losses become catastrophic.
+
+### 4.3 Main limitation
+
+Bank compensation and governance are difficult because apparent profits can precede realized losses. A banker can be rewarded today for risk that will surface only years later. That timing problem is why banking governance places unusual weight on deferral, ex post adjustment, independent risk review, and supervisory scrutiny.^[Basel Committee on Banking Supervision, *Corporate Governance Principles for Banks*; FDIC, *Incentive-Based Compensation Arrangements*; FDIC, *Risk Management Manual of Examination Policies*.]
+
+## 5. Executive compensation
+
+### 5.1 Why executive compensation matters
+
+Executive compensation is one of the principal tools used to address agency problems in corporations and banks. It can either improve alignment or make the problem worse. If the metric is narrow or manipulable, compensation can encourage exactly the behavior principals most want to avoid: earnings management, short-termism, distorted operational priorities, or excess risk-taking.
+
+### 5.2 Main solutions
+
+#### 5.2.1 Use informative, not merely convenient, performance measures
+
+Holmström’s moral-hazard framework implies that compensation should be tied to signals that help identify managerial contribution.^[Holmström, “Moral Hazard and Observability.”] In practice, this means boards should be skeptical of single-metric plans and should distinguish luck from contribution whenever feasible.
+
+#### 5.2.2 Lengthen the horizon
+
+Longer vesting periods, deferred compensation, and equity exposure make managers internalize more of the future consequences of their decisions. This is especially important where strategies can boost short-run accounting or market outcomes while undermining long-term value.
+
+#### 5.2.3 Improve disclosure
+
+The SEC’s 2022 pay-versus-performance rule requires specified disclosure about executive compensation actually paid and company performance in proxy or information statements where executive compensation disclosure is required.^[U.S. Securities and Exchange Commission, *Pay Versus Performance*, Release No. 34-95607 (August 25, 2022), <https://www.sec.gov/rules-regulations/2022/08/pay-versus-performance>; PDF at <https://www.sec.gov/files/rules/final/2022/34-95607.pdf>.] The rule is fundamentally informational: it gives shareholders a clearer basis for judging whether boards are actually aligning pay with performance rather than merely asserting that they are.
+
+#### 5.2.4 Add ex post recovery mechanisms
+
+The SEC’s 2022 clawback rule requires listing standards directing issuers to adopt policies for recovering erroneously awarded incentive-based compensation in the event of certain accounting restatements.^[U.S. Securities and Exchange Commission, *Listing Standards for Recovery of Erroneously Awarded Compensation*, Release No. 33-11126 (October 26, 2022), <https://www.sec.gov/files/rules/final/2022/33-11126.pdf>.] This is a classic bonding device. It does not merely promise alignment in advance; it creates a mechanism to retrieve pay when the measured basis for that pay later proves erroneous.
+
+#### 5.2.5 Ensure independent pay governance
+
+The logic of executive compensation is undermined if executives effectively design or dominate their own reward structures. For that reason, governance guidance consistently favors independent board or committee oversight of remuneration decisions.^[OECD, *G20/OECD Principles of Corporate Governance 2023*; Basel Committee on Banking Supervision, *Corporate Governance Principles for Banks*; FDIC, *Incentive-Based Compensation Arrangements*.]
+
+### 5.3 Main limitation
+
+Executive compensation cannot solve agency problems if the surrounding governance system is weak. Pay plans operate on top of board quality, disclosure quality, internal controls, and risk governance. Well-designed pay can help; poorly governed pay can intensify agency losses.
+
+## 6. Conclusion
+
+The most durable solution to principal–agent problems is not a single contract term or governance device, but a **matched institutional bundle**. The right bundle depends on the form of agency risk:
+
+- where **hidden effort** dominates, informative performance measures and incentive design matter most;
+- where **information asymmetry** dominates, disclosure, audit, and independent review are central;
+- where **discretion and process abuse** dominate, segregation of duties and formal controls are important;
+- where **risk shifting** dominates, as in banking, deferral, independent risk management, and prudential supervision become essential.
+
+Across corporations, public agencies, banking, and executive compensation, the recurring lesson is the same: institutions work best when they channel self-interest rather than assuming it away. That is the enduring contribution of agency theory, and it remains the best organizing framework for thinking about governance reform.
+
+## Bibliography
+
+- Basel Committee on Banking Supervision. *Core Principles for Effective Banking Supervision*. Bank for International Settlements, revised April 2024. <https://www.bis.org/bcbs/publ/d573.htm>. PDF: <https://www.bis.org/bcbs/publ/d573.pdf>.
+- Basel Committee on Banking Supervision. *Corporate Governance Principles for Banks*. Bank for International Settlements, July 2015. <https://www.bis.org/bcbs/publ/d328.htm>. PDF: <https://www.bis.org/bcbs/publ/d328.pdf>.
+- Federal Deposit Insurance Corporation. *Incentive-Based Compensation Arrangements*. Notice of Proposed Rulemaking materials, May 2024. <https://www.fdic.gov/news/inactive-financial-institution-letters/2024/incentive-based-compensation-arrangements>. PDF: <https://www.fdic.gov/sites/default/files/2024-05/2024-05-03-incentive-based-compensation-agreements.pdf>.
+- Federal Deposit Insurance Corporation. *Risk Management Manual of Examination Policies*. <https://www.fdic.gov/risk-management-manual-examination-policies>. PDF: <https://www.fdic.gov/resources/supervision-and-examinations/examination-policies-manual/risk-management-manual-complete.pdf>.
+- Holmström, Bengt. “Moral Hazard and Observability.” *The Bell Journal of Economics* 10, no. 1 (1979): 74–91. <https://www.jstor.org/stable/3003320>.
+- Jensen, Michael C., and William H. Meckling. “Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure.” *Journal of Financial Economics* 3, no. 4 (1976): 305–360. <https://doi.org/10.1016/0304-405X(76)90026-X>.
+- OECD. *G20/OECD Principles of Corporate Governance 2023*. Paris: OECD Publishing, 2023. <https://www.oecd.org/en/publications/g20-oecd-principles-of-corporate-governance-2023_ed750b30-en.html>. PDF: <https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/09/g20-oecd-principles-of-corporate-governance-2023_60836fcb/ed750b30-en.pdf>.
+- Office of Management and Budget. *OMB Circular No. A-123: Management’s Responsibility for Internal Control*. Revised March 10, 2026. <https://www.whitehouse.gov/omb/information-resources/guidance/circulars/>. PDF: <https://www.whitehouse.gov/wp-content/uploads/2026/03/OMB-Circular-No.-A-123-2026.pdf>.
+- U.S. Government Accountability Office. *Standards for Internal Control in the Federal Government* (Green Book), GAO-25-107721. Washington, DC: GAO, 2025. <https://www.gao.gov/products/gao-25-107721>. PDF: <https://www.gao.gov/assets/gao-25-107721.pdf>.
+- U.S. Securities and Exchange Commission. *Listing Standards for Recovery of Erroneously Awarded Compensation*, Release No. 33-11126. October 26, 2022. <https://www.sec.gov/files/rules/final/2022/33-11126.pdf>.
+- U.S. Securities and Exchange Commission. *Pay Versus Performance*, Release No. 34-95607. August 25, 2022. <https://www.sec.gov/rules-regulations/2022/08/pay-versus-performance>. PDF: <https://www.sec.gov/files/rules/final/2022/34-95607.pdf>.

@@ -33,6 +33,7 @@
   {
     "listing": "/posts/index.html",
     "items": [
+      "/posts/Principals-Agents/index.html",
       "/posts/qwen-3.5-35B-Marketing/index.html",
       "/posts/qwen-3.5-35B-Accounting/index.html",
       "/posts/Inbox-Cleaning/index.html",
